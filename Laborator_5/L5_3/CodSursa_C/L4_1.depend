@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1540584977 source:d:\facultate\materie\programarea_calculatoarelor\laboratoare\l4\l4_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1541055470 source:e:\teme\pc\l5_01.11.2018\l4_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1541064098 source:g:\teme\pc\l5_01.11.2018\l4_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1541095355 source:d:\facultate\materie\programarea_calculatoarelor\l5_01.11.2018\l4_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1541103124 source:d:\facultate\materie\programarea_calculatoarelor\l5_01.11.2018\proiect_final\codsursa_c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1541103124 source:d:\facultate\materie\programarea_calculatoarelor\l5_01.11.2018\l5_3\codsursa_c\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1539383081 source:d:\facultate\materie\programarea_calculatoarelor\laboratoare\l2\l2_4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

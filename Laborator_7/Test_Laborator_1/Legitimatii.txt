@@ -1,0 +1,15 @@
+2245
+101234
+22359
+2234
+11
+225591
+2335481
+22354
+224
+12
+
+
+        //readList(BazaDate,&Size);
+    //encrypt(EncryptedList,BazaDate,Size,224);
+    //printBinary(EncryptedList,Size);

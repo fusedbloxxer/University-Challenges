@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1542218978 source:d:\facultate\teme\cc\4.14.3\main.c
+	<stdio.h>
+	<stdlib.h>
+

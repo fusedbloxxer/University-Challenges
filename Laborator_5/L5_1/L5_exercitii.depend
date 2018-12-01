@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1541047696 source:d:\facultate\materie\programarea_calculatoarelor\laboratoare\l4\l5_exercitii\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cod.h"
+
+1541047682 d:\facultate\materie\programarea_calculatoarelor\laboratoare\l4\l5_exercitii\cod.h
+
+1541047698 source:e:\teme\pc\l5_01.11.2018\l5_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cod.h"
+
+1541047684 e:\teme\pc\l5_01.11.2018\l5_1\cod.h
+
+1541047698 source:g:\teme\pc\l5_01.11.2018\l5_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"cod.h"
+
+1541047684 g:\teme\pc\l5_01.11.2018\l5_1\cod.h
+

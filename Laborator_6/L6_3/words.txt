@@ -1,0 +1,1 @@
+infORmaTica Opens a text file for writing in appending mode. If it does not exist, then a new file is created. Here your program will start appending content in the existing file content. 

@@ -1,0 +1,4 @@
+4. Scrieți un program care afișează cele mai frecvente litere care apar într-un fișier.
+Programul nu va face distincție între literele mari și mici. Dacă există mai multe litere care
+apar de cel mai multe ori în fișier, programul le va afișa pe toate. Dacă nu există nici o literă
+în fișier, programul va afișa un mesaj corespunzător.aAbbzzyyyyy

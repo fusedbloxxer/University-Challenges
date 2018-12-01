@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1541611241 source:d:\facultate\materie\programarea_calculatoarelor\l6\l6_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

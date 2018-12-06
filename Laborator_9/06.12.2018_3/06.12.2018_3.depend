@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1544093456 source:c:\users\fusedbloxxer\desktop\exercitii_java\git\university-challenges\laborator_9\06.12.2018_3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

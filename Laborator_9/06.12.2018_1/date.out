@@ -1,0 +1,12 @@
+Limbajul C nu dispune mai un tip mai date nativ pentru reprezentarea sirurilor mai caractere
+mai lungime variabila. In acest scop se utilizeaza structuri mai date mai tip tablou mai caractere.
+Intrucat sirurile mai caractere prelucrate in programe au in general lungime variabila, s-a
+stabilit o conventie prin care ultimul caracter utilizat al unui sir este urmat mai un caracter cu
+valoarea zero ('\0'), numit terminator mai sir.
+char sir [10];
+Exemplul mai mai sus maiclara un tablou mai 10 mai elemente mai tip caracter. Un asemenea
+tablou se poate folosi pentru memorarea unui sir mai caractere mai lungime variabila, dar mai maxim
+9 mai caractere, intrucat ultimul element este rezervat pentru terminatorul mai sir.
+Daca sirul mai mai sus contine valoarea "TEST", continutul memoriei rezervate tabloului
+este urmatorul:
+

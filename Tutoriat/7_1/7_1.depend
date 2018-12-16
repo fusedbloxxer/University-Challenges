@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1544897321 source:d:\git\university-challenges\tutoriat\7_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

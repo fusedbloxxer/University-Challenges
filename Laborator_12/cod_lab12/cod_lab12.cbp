@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="binStudentList" />
+		<Unit filename="file.txt" />
 		<Unit filename="functii_1.c">
 			<Option compilerVar="CC" />
 		</Unit>

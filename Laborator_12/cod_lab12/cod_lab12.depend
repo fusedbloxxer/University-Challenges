@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1545308091 source:c:\users\fusedbloxxer\desktop\exercitii_java\git\university-challenges\laborator_12\cod_lab12\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+	"functii_1.h"
+
+1545300458 c:\users\fusedbloxxer\desktop\exercitii_java\git\university-challenges\laborator_12\cod_lab12\functii_1.h
+
+1545305762 source:c:\users\fusedbloxxer\desktop\exercitii_java\git\university-challenges\laborator_12\cod_lab12\functii_1.c
+	<stdio.h>
+

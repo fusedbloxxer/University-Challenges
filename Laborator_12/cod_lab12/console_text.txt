@@ -1,0 +1,10 @@
+9
+1. (re)             Reinitializare lista
+2. (add X)          Adaugare in lista
+3. (rm  X)          Eliminare din lista
+4. (sort A/M/F/P/S) Sortare lista(alfabeitc, dupa medie, dupa facultate, dupa forma/statut + COMBINED)
+5. (up  X)          Actualizare student
+6. (save)           Save list to file
+7. (rf)             Refresh list
+8. (pr)             Print list
+9. (exit)           Exit program

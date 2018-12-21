@@ -106,8 +106,8 @@ void copy(student **head, student **tail, student *aux)
     if(*head == NULL)
     {
         *head = aux;
-        (*head)->next = NULL;
-        (*head)->previous = NULL;
+        (*head)->next = *head;
+        (*head)->previous = *head;
         *tail = *head;
     }
     else
@@ -142,6 +142,9 @@ void re(student **head, student **tail, int poz, int *nrOfStudent)
             st->next = current->next;
             dr->previous = current->previous;
             (*nrOfStudent)--;
+
+            if(current == *head) *head = dr;
+            else if(current == *tail) *tail = st;
             free(current);
         }
     }
@@ -150,35 +153,42 @@ int CompareA(void *a, void *b)
 {
     student *al = (student *)a;
     student *bl = (student *)b;
-    if(strcmp(al->nume, bl->nume) != 0) return strcmp(al->nume, bl->nume);
+    if(strcmp(al->nume, bl->nume) != 0)
+        return strcmp(al->nume, bl->nume);
     return strcmp(al->prenume, bl->prenume);
 }
 int CompareM(void *a, void *b)
 {
     student *al = (student *)a;
     student *bl = (student *)b;
-    if(al->medie_generala > bl->medie_generala) return 1;
-    else return 0;
+    if(al->medie_generala > bl->medie_generala)
+        return 1;
+    else
+        return 0;
 }
 int CompareF(void *a, void *b)
 {
     student *al = (student *)a;
     student *bl = (student *)b;
-    if(strcmp(al->facultate, bl->facultate) != 0) return strcmp(al->facultate, bl->facultate);
+    if(strcmp(al->facultate, bl->facultate) != 0)
+        return strcmp(al->facultate, bl->facultate);
     return strcmp(al->facultate, bl->facultate);
 }
 int CompareG(void *a, void *b)
 {
     student *al = (student *)a;
     student *bl = (student *)b;
-    if(al->grupa > bl->grupa) return 1;
-    else return 0;
+    if(al->grupa > bl->grupa)
+        return 1;
+    else
+        return 0;
 }
 int CompareS(void *a, void *b)
 {
     student *al = (student *)a;
     student *bl = (student *)b;
-    if(strcmp(al->specializare, bl->specializare) != 0) return strcmp(al->specializare, bl->specializare);
+    if(strcmp(al->specializare, bl->specializare) != 0)
+        return strcmp(al->specializare, bl->specializare);
     return strcmp(al->specializare, bl->specializare);
 }
 void BubbleSort(student *head, int nrOfStudents, int (*f)(void *, void *), int sign)
@@ -235,21 +245,24 @@ int main()
         {
             if(strcmp(mode[0], "re") == 0)
             {
-                student *index, *remove;
-                if(head->next!=NULL)
+                if(head != NULL)
                 {
-                    remove = index;
-                    index = head->next;
-                }
-                while(index != tail)
-                {
+                    student *index, *remove;
+                    if(head->next!=NULL)
+                    {
+                        remove = index;
+                        index = head->next;
+                    }
+                    while(index != tail)
+                    {
+                        free(remove);
+                        remove = index;
+                        index  = index->next;
+                    }
                     free(remove);
-                    remove = index;
-                    index  = index->next;
+                    head = tail = NULL;
+                    nrOfStudents = 0;
                 }
-                free(remove);
-                head = tail = NULL;
-                nrOfStudents = 0;
             }
             else if(strcmp(mode[0], "save") == 0)
             {
@@ -307,9 +320,23 @@ int main()
                 int N;
                 sscanf(mode[1], "%d", &N);
                 re(&head, &tail, N, &nrOfStudents);
+
             }
             else if(strcmp(mode[0], "up") == 0)
             {
+                ///TO DO
+                FILE *F = fopen("date.txt", "r+b");
+                int N;
+                sscanf(mode[1], "%d", &N);
+                char facultate[50];
+                printf("Denumire Facultate: ");
+                fflush(stdin);
+                fgets(facultate, 50, stdin);
+                facultate[strlen(facultate) - 1] = '\0';
+                fseek(F, sizeof(student) * N, SEEK_SET);
+                fwrite(facultate, sizeof(facultate), 1, F);
+                fclose(F);
+
             }
             else if(strcmp(mode[0], "sort") == 0)
             {
@@ -340,8 +367,10 @@ int main()
                     }
 
                     int sign;
-                    if(mode[1][++index] == '-') sign = -1;
-                    else sign = 1;
+                    if(mode[1][++index] == '-')
+                        sign = -1;
+                    else
+                        sign = 1;
                     BubbleSort(head, nrOfStudents, f, sign);
                 }
             }

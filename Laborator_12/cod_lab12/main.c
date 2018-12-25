@@ -161,10 +161,13 @@ int CompareM(void *a, void *b)
 {
     student *al = (student *)a;
     student *bl = (student *)b;
-    if(al->medie_generala > bl->medie_generala)
+    if(al->medie_generala > bl->medie_generala) {
         return 1;
-    else
+    } else if(al->medie_generala < bl->medie_generala) {
+        return -1;
+    } else
         return 0;
+
 }
 int CompareF(void *a, void *b)
 {

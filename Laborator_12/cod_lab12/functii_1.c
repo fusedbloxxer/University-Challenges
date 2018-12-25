@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+
 char** GetText(char fileName[], int *lines) {
     FILE *f = fopen(fileName, "r");
     int index;

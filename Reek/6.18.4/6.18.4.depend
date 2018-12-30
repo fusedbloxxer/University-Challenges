@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1546156198 source:d:\git\university-challenges\reek\6.18.4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

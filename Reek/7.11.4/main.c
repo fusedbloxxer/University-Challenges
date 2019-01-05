@@ -142,12 +142,12 @@ int main()
     {
         printf("Enter number: ");
         fscanf(stdin, "%d", &x);
-        int index;
-        for(index = 0; index <= x; index++)
-        {
-            written_amount(index, buffer);
+        //int index;
+        //for(index = 0; index <= x; index++)
+        //{
+            written_amount(x, buffer);
             printf("%s\n", buffer);
-        }
+       // }
     }
     return 0;
 }

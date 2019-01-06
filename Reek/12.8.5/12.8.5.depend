@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1546789610 source:d:\git\university-challenges\reek\12.8.5\main.c
+	<stdio.h>
+	<stdlib.h>
+	"singly_linked_list_node.h"
+
+1546789420 d:\git\university-challenges\reek\12.8.5\singly_linked_list_node.h
+

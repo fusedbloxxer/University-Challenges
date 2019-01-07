@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1546810064 source:d:\git\model_test\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
+1546810066 source:c:\users\fusedbloxxer\desktop\model_test\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+

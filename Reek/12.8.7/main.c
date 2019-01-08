@@ -2,28 +2,31 @@
 #include <stdlib.h>
 #include <string.h>
 #include "concordance_list.h"
+
+// FUNCTIONEAZA!
+
 void addNode(struct node **head, char *string)
 {
     if(*head == NULL)
     {
         *head = (struct node *)malloc(sizeof(struct node));
-        // (*head)->word = (char *)malloc(strlen(string) * sizeof(char));
-        // strcpy((*head)->word, string);
-        (*head)->word = string;
+        (*head)->word = (char *)malloc(sizeof(char) * strlen(string) + 1);
+        strcpy((*head)->word, string);
         (*head)->nextWord = NULL;
     }
     else
     {
-        if(strcmp((*head)->word, string) <= 0)
+        if(strcmp((*head)->word, string) >= 0)
         {
             struct node *aux = (struct node*)malloc(sizeof(struct node));
-            aux->nextWord = (*head)->nextWord;
+            aux->nextWord = *head;
+            aux->word  = (char *)malloc(sizeof(char) * strlen(string) + 1);
+            strcpy(aux->word, string);
+
             *head = aux;
-            aux->word = string;
         }
         else
         {
-
             struct node *currentWord = *head;
             while(currentWord->nextWord != NULL && strcmp(string, currentWord->nextWord->word) > 0)
             {
@@ -32,55 +35,101 @@ void addNode(struct node **head, char *string)
 
             struct node* aux = (struct node*)malloc(sizeof(struct node));
             aux->nextWord = currentWord->nextWord;
-            currentWord->nextWord = aux;
-            aux->word = string;
-        }
+            aux->word  = (char *)malloc(sizeof(char) * strlen(string) + 1);
+            strcpy(aux->word, string);
 
+            currentWord->nextWord = aux;
+        }
     }
 }
 void addConcordance(struct cNode** list, char *string)
 {
+    char c;
+    if(string[0] >='A' && string[0]<='Z')
+        c = string[0] + 32;
+    else
+        c = string[0];
+
     if(*list == NULL)
     {
         *list = (struct cNode *)malloc(sizeof(struct cNode));
-        (*list)->letter = string[0];
         (*list)->nextLetter = NULL;
-        add(&((*list)->firstWord), string);
+        (*list)->firstWord =  NULL;
+        (*list)->letter = c;
+
+        addNode(&((*list)->firstWord), string);
     }
     else
     {
-        if((*list)->letter > string[0])
+        if((*list)->letter > c)
         {
             struct cNode *aux = (struct cNode *)malloc(sizeof(struct cNode));
             aux->nextLetter = *list;
+            aux->firstWord  = NULL;
+            aux->letter = c;
+
             *list = aux;
-            aux->letter = string[0];
-            add(&((*list)->firstWord), string);
+            addNode(&((*list)->firstWord), string);
+        }
+        else if((*list)->letter == c)
+        {
+            addNode(&((*list)->firstWord), string);
         }
         else
         {
             struct cNode *currentLetter = *list;
-            while(currentLetter->nextLetter != NULL && string[0] > currentLetter->letter)
+            while(currentLetter->nextLetter != NULL && c > currentLetter->nextLetter->letter)
             {
                 currentLetter = currentLetter->nextLetter;
             }
 
-            if(string[0] != currentLetter->nextLetter->letter)
+            if(currentLetter->nextLetter == NULL || c != currentLetter->nextLetter->letter)
             {
                 struct cNode *aux = (struct cNode *)malloc(sizeof(struct cNode));
-                aux->letter = string[0];
-                aux->
+                aux->nextLetter = currentLetter->nextLetter;
+                aux->firstWord = NULL;
+                aux->letter = c;
+
+                currentLetter->nextLetter = aux;
+                addNode(&(aux->firstWord), string);
             }
             else
             {
-
+                addNode(&(currentLetter->nextLetter->firstWord), string);
             }
         }
     }
 }
-
+void printConcordanceList(struct cNode *head)
+{
+    while(head != NULL)
+    {
+        printf("->%c", head->letter);
+        struct node *subHead = head->firstWord;
+        while(subHead != NULL)
+        {
+            printf("\n   ->%s ", subHead->word);
+            subHead = subHead->nextWord;
+        }
+        printf("\n");
+        head = head->nextLetter;
+    }
+}
 int main()
 {
+    struct cNode *list = NULL;
+    FILE* f = fopen("date.in", "r");
+    char buffer[1000];
+    while(fgets(buffer, 1000, f) != NULL)
+    {
+        char *p = strtok(buffer, " ");
+        while(p)
+        {
+            addConcordance(&list, p);
+            p = strtok(NULL, " ");
+        }
+    }
+    printConcordanceList(list);
 
     return 0;
 }

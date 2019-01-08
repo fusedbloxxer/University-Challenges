@@ -16,7 +16,8 @@ void addNode(struct node **head, char *string)
     }
     else
     {
-        if(strcmp((*head)->word, string) >= 0)
+        if(strcmp((*head)->word, string) == 0) return;
+        if(strcmp((*head)->word, string) > 0)
         {
             struct node *aux = (struct node*)malloc(sizeof(struct node));
             aux->nextWord = *head;
@@ -31,14 +32,27 @@ void addNode(struct node **head, char *string)
             while(currentWord->nextWord != NULL && strcmp(string, currentWord->nextWord->word) > 0)
             {
                 currentWord = currentWord->nextWord;
+                if(strcmp(currentWord->word, string) == 0) return;
             }
+            if(currentWord->nextWord == NULL)
+            {
+                struct node* aux = (struct node*)malloc(sizeof(struct node));
+                aux->nextWord = currentWord->nextWord;
+                aux->word  = (char *)malloc(sizeof(char) * strlen(string) + 1);
+                strcpy(aux->word, string);
 
-            struct node* aux = (struct node*)malloc(sizeof(struct node));
-            aux->nextWord = currentWord->nextWord;
-            aux->word  = (char *)malloc(sizeof(char) * strlen(string) + 1);
-            strcpy(aux->word, string);
+                currentWord->nextWord = aux;
+            }
+            /// Insert only if the word is new. Avoiding duplicate words.
+            else if(strcmp(string, currentWord->nextWord->word) < 0)
+            {
+                struct node* aux = (struct node*)malloc(sizeof(struct node));
+                aux->nextWord = currentWord->nextWord;
+                aux->word  = (char *)malloc(sizeof(char) * strlen(string) + 1);
+                strcpy(aux->word, string);
 
-            currentWord->nextWord = aux;
+                currentWord->nextWord = aux;
+            }
         }
     }
 }
@@ -115,6 +129,20 @@ void printConcordanceList(struct cNode *head)
         head = head->nextLetter;
     }
 }
+void removeJunk_ToLower(char *c) {
+    while(*c != '\0') {
+        if(*c >= 'A' && *c <= 'Z') *c = *c + 32;
+        else if(*c < 'a' || *c > 'z') {
+            char *p = c;
+            while(*p != '\0') {
+               *p = *(p + 1);
+                p = p + 1;
+            }
+            c = c - 1;
+        }
+        c = c + 1;
+    }
+}
 int main()
 {
     struct cNode *list = NULL;
@@ -125,11 +153,16 @@ int main()
         char *p = strtok(buffer, " ");
         while(p)
         {
-            addConcordance(&list, p);
+            char *f = (char *)malloc(sizeof(char) * strlen(p));
+            strcpy(f, p);
+            removeJunk_ToLower(f);
+            if(strlen(f) > 0)
+            addConcordance(&list, f);
             p = strtok(NULL, " ");
+
+            free(f);
         }
     }
     printConcordanceList(list);
-
     return 0;
 }

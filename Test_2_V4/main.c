@@ -22,25 +22,27 @@ struct magazin
     int gps_x;
     int gps_y;
 };
-struct produs* readProducts(int *N)
+void readProducts(int *N, struct produs **head)
 {
     FILE *f = fopen("date.in", "r");
     fscanf(f, "%d", N);
-    struct produs *head = (struct produs *)malloc(*N * sizeof(struct produs));
+    *head = (struct produs *)malloc(*N * sizeof(struct produs));
     int i;
     for(i = 0; i < *N; i++)
     {
         int j;
-        fscanf(f, "%s", head[i].nume);
-        fscanf(f, "%d", &head[i].nOfMagazine);
+        fscanf(f, "%s", (*(*head + i)).nume);
+        fscanf(f, "%d", &(*head + i)->nOfMagazine);
+        //fscanf(f, "%d", &head[i].nOfMagazine);
+        //fscanf(f, "%d", &head[i].nOfMagazine);
 
-        head[i].m = (struct magazin *)malloc(head[i].nOfMagazine * sizeof(struct magazin));
-        for(j = 0; j < head[i].nOfMagazine; j++)
+        (*head + i)->m = (struct magazin *)malloc((*head + i)->nOfMagazine * sizeof(struct magazin));
+        for(j = 0; j < (*head + i)->nOfMagazine; j++)
         {
-            fscanf(f, "%s", head[i].m[j].nume);
-            fscanf(f, "%f", &head[i].m[j].pret);
-            fscanf(f, "%d", &head[i].m[j].gps_x);
-            fscanf(f, "%d", &head[i].m[j].gps_y);
+            fscanf(f, "%s", (*head + i)->m[j].nume);
+            fscanf(f, "%f", &(*head + i)->m[j].pret);
+            fscanf(f, "%d", &(*head + i)->m[j].gps_x);
+            fscanf(f, "%d", &(*head + i)->m[j].gps_y);
         }
     }
     fclose(f);
@@ -180,7 +182,8 @@ int main()
     int N, i;
 
     /// Exercitiul 1:
-    struct produs *list = readProducts(&N);
+    struct produs *list;
+    readProducts(&N, &list);
     printf("PRODUSE CITITE:\n\n");
     afis(list, N, 1);
 

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1547834267 source:d:\git\practice\morepractice\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1547834267 source:d:\git\university-challenges\practice folder\morepractice\main.c
+	<stdio.h>
+	<stdlib.h>
+

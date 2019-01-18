@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *** biDiag(int ***matrix, const char *file_name, int *N)
+int ** biDiag(int ***matrix, const char *file_name, int *N)
 {
     FILE *F = fopen(file_name, "r");
     fscanf(F, "%d", N);
@@ -26,7 +26,7 @@ int *** biDiag(int ***matrix, const char *file_name, int *N)
     }
 
     fclose(F);
-    return matrix;
+    return *matrix;
 }
 void printMatrix(int **matrix, int N)
 {

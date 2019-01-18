@@ -83,17 +83,14 @@ int compareTo(void *a, void *b) {
         return bl->medie_admitere - al->medie_admitere;
 }
 void BubbleSort(int n, struct student *head) {
-    int i, j, check;
+    int i, j;
 
     for (i = 0; i < n - 1; i++) {
-        check = 0;
-
         for (j = i + 1; j < n; j++) {
             struct student *s1 = get(head, i);
             struct student *s2 = get(head, j);
 
             if (compareTo((void *)s1, (void *)s2) > 0) {
-                check = 1;
                 struct student aux;
 
                 aux = *s1;
@@ -104,9 +101,6 @@ void BubbleSort(int n, struct student *head) {
                 s2->next  = aux.next;
             }
         }
-
-        if (check == 0)
-            return;
     }
 }
 int main() {

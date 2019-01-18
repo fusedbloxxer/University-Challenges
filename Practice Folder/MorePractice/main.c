@@ -165,7 +165,8 @@ int cmp(const void *a, const void *b)
 }
 void * numarare(const void* v, int n, int d, int cmp(const void *, const void *))
 {
-    int i, contor;
+    int i;
+    int *contor = (int *)malloc(sizeof(int));
     void *maxim = v;
     for(i = 1; i < n; i++)
     {
@@ -181,8 +182,7 @@ void * numarare(const void* v, int n, int d, int cmp(const void *, const void *)
             }
         }
     }
-    printf("\nThe maximum value is: (char)%c (int)%d", *(char *)maxim, *(int *)maxim);
-    contor = 0;
+    *contor = 0;
     for(i = 0; i < n; i++)
     {
         int j;
@@ -192,11 +192,14 @@ void * numarare(const void* v, int n, int d, int cmp(const void *, const void *)
         {
             if(cmp((void *)(octet2 + j), (void *)(octet1 + j)) == -1)
             {
-                contor++; j = 0; break;
+                *contor = *contor + 1;
+                j = 0;
+                break;
             }
         }
     }
-    printf("\nThere are %d values smaller than the maximum one.", contor);
+
+    return (void *)contor;
 }
 int main()
 {
@@ -235,9 +238,11 @@ int main()
     ///Subpunctul 4
     char caractere[] = "adfcfe";
     int  values[] = {1, 2, 4, 5, 5, 5};
-
-    numarare(values, 6, sizeof(int), cmp);
-    numarare(caractere, strlen(caractere), sizeof(char), cmp);
+    int  val;
+    val = *(int *)numarare(values, 6, sizeof(int), cmp);
+    printf("\nNUMAR ELEMENTE: %d\n", val);
+    val = *(int *)numarare(caractere, strlen(caractere), sizeof(char), cmp);
+    printf("NUMAR ELEMENTE: %d", val);
 
     return 0;
 }

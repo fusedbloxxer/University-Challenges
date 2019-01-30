@@ -1,0 +1,17 @@
+(1)(Nicki) ii provoaca (10) lui (Sharda)(Sharda este omorat)(Nicki) are 1 victorie
+(21)(Josh) ii provoaca (8) lui (Marg)(Marg este omorat)(Josh) are 1 victorie
+(52)(Lavon) ii provoaca (9) lui (Brook)(Brook este omorat)(Lavon) are 1 victorie
+(120)(Sharda) ii provoaca (5) lui (Marg)(Marg este omorat)(Sharda) are 1 victorie
+(123)(Nicki) ii provoaca (5) lui (Sharda)(Sharda este omorat)(Nicki) are 2 victorii
+(134)(Sharda) ii provoaca (2) lui (Marg)
+(232)(Gertrude) ii provoaca (7) lui (Kiersten)(Kiersten este omorat)(Gertrude) are 1 victorie
+(240)(Josh) ii provoaca (8) lui (Marg)(Marg este omorat)(Josh) are 2 victorii
+(445)(Teri) ii provoaca (4) lui (Nicki)
+(523)(Melda) ii provoaca (1) lui (Lavon)
+(551)(Lavon) ii provoaca (9) lui (Brook)(Brook este omorat)(Lavon) are 2 victorii
+(2423)(Nicki) ii provoaca (5) lui (Sharda)(Sharda este omorat)(Nicki) are 3 victorii
+(5124)(Brook) ii provoaca (9) lui (Lavon)(Lavon este omorat)(Brook) are 1 victorie
+(6634)(Melda) ii provoaca (38) lui (Sharda)(Sharda este omorat)(Melda) are 1 victorie
+(7000)(Lavon) ii provoaca (10) lui (Nicki)(Nicki este omorat)(Lavon) are 3 victorii
+(7010)(Melda) ii provoaca (10) lui (Nicki)(Nicki este omorat)(Melda) are 2 victorii
+(7011)(Kiersten) ii provoaca (10) lui (Nicki)(Nicki este omorat)(Kiersten) are 1 victorie

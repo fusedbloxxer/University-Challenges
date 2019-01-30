@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1548853785 source:d:\git\university-challenges\practice folder\examen acs\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1549580203 source:d:\git\practice\examen_v2\examen_nr2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

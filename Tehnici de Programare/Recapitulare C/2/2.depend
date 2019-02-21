@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1550777476 source:d:\git\university-challenges\tehnici de programare\recapitulare c\2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

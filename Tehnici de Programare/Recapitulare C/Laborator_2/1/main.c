@@ -9,7 +9,7 @@ int min(int a, int b) {
 void genMatrix_1(int ***a, int *n) {
     printf("N=");
     scanf("%d", n);
-    *a = (int **)malloc(sizeof(int) * (*n));
+    *a = (int **)malloc(sizeof(int*) * (*n));
     for(int i = 0; i < *n; i++) {
         (*a)[i] = (int *)malloc(sizeof(int) * (*n));
         for(int j = 0; j < *n; j++) {
@@ -23,7 +23,7 @@ void genMatrix_2(int ***a, int *n) {
     printf("K=");
     scanf("%d", &k);
     *n = 2 * k - 1;
-    *a = (int **)malloc(sizeof(int) * (*n));
+    *a = (int **)malloc(sizeof(int*) * (*n));
     for(int i = 0; i < k; i++) {
         (*a)[i] = (int *)malloc(sizeof(int) * (k - i));
         for(int j = 0; j < k - i; j++) {

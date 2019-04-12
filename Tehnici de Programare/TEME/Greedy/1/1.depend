@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1554413099 source:d:\git\university-challenges\tehnici de programare\tehnici\teme\greedy\1\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+	"D:\GIT\University-Challenges\Tehnici de Programare\TEHNICI\TEME\Useful_Resources\utils.cpp"
+
+1554409956 d:\git\university-challenges\tehnici de programare\tehnici\teme\useful_resources\utils.cpp
+	<stdlib.h>
+	<string.h>
+

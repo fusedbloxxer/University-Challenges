@@ -26,6 +26,8 @@ int main(int argc, char **args) {
 
     fprintf(output, "%d", minArr(array, 0, n - 1));
 
+    free(array);
+
     fclose(input);
     fclose(output);
 	

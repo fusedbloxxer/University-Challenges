@@ -36,6 +36,8 @@ int main(int argc, char **args) {
 
     fprintf(output, "%d", cmmdcArr(array, 0, n - 1));
 
+    free(array);
+
     fclose(input);
     fclose(output);
 	

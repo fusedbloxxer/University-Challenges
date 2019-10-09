@@ -1,0 +1,2 @@
+#include "TriunghiDrept.h"
+

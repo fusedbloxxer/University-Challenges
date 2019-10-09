@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1557421067 source:z:\git\university-challenges\tehnici de programare\teme\divide_et_impera\5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

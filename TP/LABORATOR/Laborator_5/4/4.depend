@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1553196343 source:d:\git\university-challenges\tehnici de programare\tehnici\lab5\4\main.c
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+

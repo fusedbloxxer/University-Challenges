@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1555093759 source:d:\git\university-challenges\tehnici de programare\seminar\seminar_4\3.9\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../utils.h"
+
+1555093509 d:\git\university-challenges\tehnici de programare\seminar\seminar_4\utils.h
+
+1555093216 source:d:\git\university-challenges\tehnici de programare\seminar\seminar_4\utils.c
+	<stdlib.h>
+	<string.h>
+	"utils.h"
+

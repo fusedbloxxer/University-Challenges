@@ -1,0 +1,25 @@
+﻿  BinarySearch.cpp
+  Seminar1.cpp
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(18,34): warning C4244:  'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(14): message :  while compiling class template member function 'void InsertionSort<ints>::sort(Container &) const'
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(14): message :         with
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(14): message :         [
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(14): message :             Container=ints
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(14): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\type_traits(510): message :  see reference to class template instantiation 'InsertionSort<ints>' being compiled
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(22): message :  see reference to class template instantiation 'std::is_convertible<InsertionSort<ints> *,_Ty *>' being compiled
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(22): message :         with
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(22): message :         [
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(22): message :             _Ty=Sort_I<ints>
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(22): message :         ]
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(18): message :  see reference to variable template 'const bool conjunction_v<std::negation<std::is_array<InsertionSort<std::vector<int,std::allocator<int> > > > >,std::is_convertible<InsertionSort<std::vector<int,std::allocator<int> > > *,Sort_I<std::vector<int,std::allocator<int> > > *>,std::is_convertible<std::default_delete<InsertionSort<std::vector<int,std::allocator<int> > > >,std::default_delete<Sort_I<std::vector<int,std::allocator<int> > > > > >' being compiled
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(47): message :  see reference to function template instantiation 'void trySort<ints,InsertionSort<ints>>(Container &,std::default_random_engine)' being compiled
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(47): message :         with
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(47): message :         [
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(47): message :             Container=ints
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\Seminar1.cpp(47): message :         ]
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(19,16): warning C4244:  'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(19,33): warning C4244:  'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+  Generating Code...
+C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Seminar1\InsertionSort.h(22,15): warning C4244:  'argument': conversion from '__int64' to 'const unsigned int', possible loss of data
+  Seminar1.vcxproj -> C:\Users\fused\Documents\GIT\c-practice\OOP Course\SDA\Seminar1\Debug\Seminar1.exe

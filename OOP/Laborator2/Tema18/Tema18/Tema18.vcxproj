@@ -152,18 +152,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="InputOutput_I.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="LinkedNode.cpp" />
-    <ClCompile Include="LinkedNode_I.cpp" />
+    <ClCompile Include="List_I.cpp" />
     <ClCompile Include="Printable_I.cpp" />
     <ClCompile Include="Readable_I.cpp" />
     <ClCompile Include="Tema18.cpp" />
+    <ClCompile Include="Tester.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InputOutput_I.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="LinkedNode.h" />
-    <ClInclude Include="LinkedNode_I.h" />
+    <ClInclude Include="List_I.h" />
     <ClInclude Include="Printable_I.h" />
     <ClInclude Include="Readable_I.h" />
+    <ClInclude Include="Tester.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

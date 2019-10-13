@@ -24,19 +24,15 @@ public:
 
 	// Operations
 	virtual void setNext(link next);
-	virtual LinkedNode<T>* getNext();
+	virtual LinkedNode<T>* getNext() const;
 	virtual void setPrev(link prev);
-	virtual LinkedNode<T>* getPrev();
+	virtual LinkedNode<T>* getPrev() const;
 	virtual void setValue(T value);
 	virtual T& getValue();
 
-	bool operator==(const LinkedNode<T>& linkedNode) {
-		return element == linkedNode.element;
-	}
-
-	bool operator!=(const LinkedNode<T>& linkedNode) {
-		return !(*this == linkedNode);
-	}
+	// Other operators.
+	bool operator==(const LinkedNode<T>& linkedNode) const;
+	bool operator!=(const LinkedNode<T>& linkedNode) const;
 
 	// Nothing to free here.
 	virtual ~LinkedNode() = default;
@@ -114,14 +110,14 @@ inline void LinkedNode<T>::read(std::istream& is)
 }
 
 template<class T>
-inline LinkedNode<T>* LinkedNode<T>::getNext()
+inline LinkedNode<T>* LinkedNode<T>::getNext() const
 // Cauta mai amanuntit de ce nu merge sa retunrez tipul link.
 {
 	return next;
 }
 
 template<class T>
-inline LinkedNode<T>* LinkedNode<T>::getPrev()
+inline LinkedNode<T>* LinkedNode<T>::getPrev() const
 // Cauta mai amanuntit de ce nu merge sa retunrez tipul link.
 {
 	return prev;
@@ -149,4 +145,16 @@ template<class T>
 inline T& LinkedNode<T>::getValue()
 {
 	return element;
+}
+
+template<class T>
+inline bool LinkedNode<T>::operator==(const LinkedNode<T>& linkedNode) const
+{
+	return element == linkedNode.element;
+}
+
+template<class T>
+inline bool LinkedNode<T>::operator!=(const LinkedNode<T>& linkedNode) const
+{
+	return !(*this == linkedNode);
 }

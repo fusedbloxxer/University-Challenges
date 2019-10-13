@@ -9,6 +9,7 @@ class LinkedList : public List_I<T>
 	size_t sz;
 
 public:
+
 	// Constructor.
 	LinkedList();
 	LinkedList(const LinkedList<T>& copy);
@@ -20,6 +21,17 @@ public:
 	LinkedList<T>& operator=(LinkedList<T>&& move) noexcept;
 
 	// Inherited via List_I<T>
+	// Comparator
+	virtual bool operator<(const List_I<T>& list) const override;
+	virtual int compareTo(const List_I<T>& list) const override;
+
+	// Equals and !equals
+	virtual bool operator==(const List_I<T>& list) const override;
+
+	// Sort of Iterator
+	virtual LinkedNode<T>* begin() const override;
+	virtual LinkedNode<T>* end() const override;
+
 	// Add new elements to the resource handle.
 	virtual void add(size_t index, const T& element) override;
 	virtual void push_front(const T& element) override;
@@ -51,9 +63,91 @@ public:
 };
 
 template<class T>
+inline bool LinkedList<T>::operator<(const List_I<T>& list) const
+{
+	if (sz < list.size()) {
+		return true;
+	}
+	else if (sz > list.size()) {
+		return false;
+	}
+	else {
+		auto nodeOne = head;
+		auto nodeTwo = list.begin();
+		
+		while (nodeOne) {
+			if (nodeOne->getValue() < nodeTwo->getValue()) {
+				return true;
+			}
+			else if (nodeOne->getValue() > nodeTwo->getValue()) {
+				return false;
+			}
+
+			nodeOne = nodeOne->getNext();
+			nodeTwo = nodeTwo->getNext();
+		}
+
+		return false;
+	}
+}
+
+template<class T>
+inline int LinkedList<T>::compareTo(const List_I<T>& list) const
+{
+	if (sz < list.size()) {
+		return -1;
+	}
+	else if (sz > list.size()) {
+		return 1;
+	}
+	else {
+		auto nodeOne = head;
+		auto nodeTwo = list.begin();
+
+		while (nodeOne) {
+			if (nodeOne->getValue() < nodeTwo->getValue()) {
+				return -1;
+			}
+			else if (nodeOne->getValue() > nodeTwo->getValue()) {
+				return 1;
+			}
+
+			nodeOne = nodeOne->getNext();
+			nodeTwo = nodeTwo->getNext();
+		}
+
+		return 0;
+	}
+}
+
+template<class T>
+inline bool LinkedList<T>::operator==(const List_I<T>& list) const
+{
+	// Check for self assignment.
+	if (this == &list) {
+		return true;
+	}
+	// Check sizes.
+	if (sz == list.size()) {
+		// Check node values.
+		LinkedNode<T>* node1 = head;
+		LinkedNode<T>* node2 = list.begin();
+		while (node1) {
+			if (node1->getValue() != node2->getValue()) {
+				return false;
+			}
+			node1 = node1->getNext();
+			node2 = node2->getNext();
+		}
+		return true;
+	}
+	return false;
+}
+
+template<class T>
 LinkedList<T>::LinkedList()
-	:sz{ 0 }, head{ nullptr }, tail{ nullptr } 
-{ 
+	:sz{ 0 }, head{ nullptr }, tail{ nullptr }
+{
 	// std::cout << "Default constructor for list was called." << std::endl;
 }
 
@@ -124,6 +218,18 @@ inline LinkedList<T>& LinkedList<T>::operator=(LinkedList<T>&& move) noexcept
 	move.sz = 0;
 
 	return *this;
+}
+
+template<class T>
+inline LinkedNode<T>* LinkedList<T>::begin() const
+{
+	return head;
+}
+
+template<class T>
+inline LinkedNode<T>* LinkedList<T>::end() const
+{
+	return tail;
 }
 
 template<class T>

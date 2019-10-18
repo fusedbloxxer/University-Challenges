@@ -1,0 +1,54 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2019-10-15T07:26:17.212Z",
+        "line": 3,
+        "name": "Test Connection",
+        "description": "",
+        "id": "visit-website;test-connection",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3678999099,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I setup web driver",
+            "match": {
+              "location": "AutomationSteps.iSetupWebDriver()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2952906200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I access the following URL \"http://automationpractice.com/index.php\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"http://automationpractice.com/index.php\"",
+                  "offset": 27
+                }
+              ],
+              "location": "AutomationSteps.iAccessTheFollowingURL(String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Visit Website",
+    "description": "",
+    "id": "visit-website",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/fashion.feature",
+    "tags": []
+  }
+]

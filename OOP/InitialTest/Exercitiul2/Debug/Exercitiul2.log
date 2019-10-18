@@ -1,2 +1,14 @@
-﻿  Exercitiul2.cpp
-  Exercitiul2.vcxproj -> D:\Downloads\Exercitiul2\Debug\Exercitiul2.exe
+﻿  Cerc.cpp
+  Dreptunghi.cpp
+  Exercitiul2.cpp
+  Forma.cpp
+  IO_I.cpp
+  Patrat.cpp
+  Prajitura.cpp
+  Prajituri.cpp
+  Printable.cpp
+  Readable.cpp
+  TriunghiDrept.cpp
+  Generating Code...
+  LINK : C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\InitialTest\Debug\Exercitiul2.exe not found or not built by the last incremental link; performing full link
+  Exercitiul2.vcxproj -> C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\InitialTest\Debug\Exercitiul2.exe

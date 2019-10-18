@@ -49,4 +49,3 @@ public:
 	// Destructor.
 	virtual ~Vector();
 };
-

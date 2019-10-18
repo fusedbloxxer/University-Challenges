@@ -9,7 +9,8 @@ class BigInteger : public InputOutput_I
 	using T = int;
 	LinkedList<T>* list;
 	bool isNegative;
-
+	// 25 - 7
+	// 75 + 7 = 82 -> 18
 public:
 	// Constructor initializing with your own type of list.
 	BigInteger();

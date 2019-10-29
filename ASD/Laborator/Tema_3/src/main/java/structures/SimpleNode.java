@@ -1,3 +1,5 @@
+package structures;
+
 public class SimpleNode {
     private int value;
     private SimpleNode next;

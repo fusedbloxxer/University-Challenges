@@ -1,4 +1,9 @@
-public class Stack implements ContainerInterface {
+package structures;
+
+import exceptions.PeekException;
+import exceptions.PopException;
+
+public class Stack implements Container {
     private SimpleNode head;
 
     public Stack() {
@@ -9,9 +14,9 @@ public class Stack implements ContainerInterface {
         head = new SimpleNode(element, head);
     }
 
-    public int pop() throws Exception {
+    public int pop() throws PopException {
         if (head == null) {
-            throw new Exception("No elements to pop.");
+            throw new PopException();
         } else {
             SimpleNode temp = head;
             head = head.getNext();
@@ -20,9 +25,9 @@ public class Stack implements ContainerInterface {
         }
     }
 
-    public int peek() throws Exception {
+    public int peek() throws PeekException {
         if (head == null) {
-            throw new Exception("No elements to peek.");
+            throw new PeekException();
         } else {
             return head.getValue();
         }
@@ -33,22 +38,26 @@ public class Stack implements ContainerInterface {
     }
 
     public int search(int element) {
-        SimpleNode node = head; int index = 0;
+        SimpleNode node = head;
+        int index = 0;
         while (node != null) {
             if (element == node.getValue()) {
                 return index;
             }
+            ++index;
             node = node.getNext();
         }
         return -1;
     }
 
     public void print() {
+        System.out.print("The structure contains: ");
         SimpleNode node = head;
         while (node != null) {
             System.out.print(node.getValue() + " ");
             node = node.getNext();
         }
+        System.out.println();
     }
 
 }

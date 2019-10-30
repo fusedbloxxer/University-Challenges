@@ -10,7 +10,7 @@ public class ProblemEleven {
         GenericList<Integer> C = new GenericList<>();
         GenericList<Integer> A = new GenericList<>();
         GenericList<Integer> B = new GenericList<>();
-        IntStream.range(1, 100).forEach(C::pushBack);
+        IntStream.range(1, 21).forEach(C::pushBack);
         C.print();
 
         split(A, B, C);
@@ -22,16 +22,18 @@ public class ProblemEleven {
         GenericNode<Integer> even = C.getHead();
         GenericNode<Integer> odd = (even != null) ? even.getNext() : null;
         A.setHead(even);
+        A.setTail(even);
         B.setHead(odd);
+        B.setTail(odd);
 
         while (even != null && odd != null) {
-            System.out.println(even.getValue() + " " + odd.getValue() + "\n");
-
             even.setNext(odd.getNext());
             if (odd.getNext() != null) {
                 odd.setNext(odd.getNext().getNext());
             }
 
+            A.setTail(even);
+            B.setTail(odd);
             even = even.getNext();
             odd = odd.getNext();
         }

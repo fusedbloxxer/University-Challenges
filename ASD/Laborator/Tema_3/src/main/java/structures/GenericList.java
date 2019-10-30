@@ -44,6 +44,23 @@ public class GenericList<T> {
         }
     }
 
+    public void remove(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index out of bounds.");
+        } else if (index == 0) {
+            removeFront();
+        } else if (index == size - 1) {
+            removeBack();
+        } else {
+            --size;
+            GenericNode<T> node = head;
+            while (index-- != 1) {
+                node = node.getNext();
+            }
+            node.setNext(node.getNext().getNext());
+        }
+    }
+
     public void removeFront() {
         if (head != null) {
             --size;
@@ -122,5 +139,33 @@ public class GenericList<T> {
 
     public void setTail(GenericNode<T> tail) {
         this.tail = tail;
+    }
+
+    public void incSize() {
+        ++size;
+    }
+
+    public void decSize() {
+        --size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public void setCircular(boolean isCircular) {
+        if (tail != null) {
+            if (isCircular) {
+                tail.setNext(head);
+            } else {
+                tail.setNext(null);
+            }
+        } else {
+            System.out.println("List cannot be made circular !");
+        }
+    }
+
+    public boolean isCircular() {
+        return tail != null && tail.getNext() == head;
     }
 }

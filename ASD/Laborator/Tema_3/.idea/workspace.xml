@@ -52,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProblemEleven">
+  <component name="RunManager" selected="Application.ProblemExtraTwo">
     <configuration name="ProblemEleven" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="probleme.liste.ProblemEleven" />
       <module name="sda" />
@@ -66,8 +66,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProblemNine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="probleme.liste.ProblemNine" />
+    <configuration name="ProblemExtraTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="probleme.liste.ProblemExtraTwo" />
       <module name="sda" />
       <extension name="coverage">
         <pattern>
@@ -120,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProblemExtraTwo" />
         <item itemvalue="Application.ProblemEleven" />
         <item itemvalue="Application.ProblemTen" />
         <item itemvalue="Application.ProblemTwo" />
         <item itemvalue="Application.ProblemSeven" />
-        <item itemvalue="Application.ProblemNine" />
       </list>
     </recent_temporary>
   </component>

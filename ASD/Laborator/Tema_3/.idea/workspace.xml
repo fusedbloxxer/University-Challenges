@@ -53,6 +53,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.ProblemExtraTwo">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="sda" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProblemEleven" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="probleme.liste.ProblemEleven" />
       <module name="sda" />
@@ -105,26 +112,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProblemTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="probleme.stive.ProblemTwo" />
-      <module name="sda" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="probleme.stive.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ProblemExtraTwo" />
         <item itemvalue="Application.ProblemEleven" />
-        <item itemvalue="Application.ProblemTen" />
-        <item itemvalue="Application.ProblemTwo" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ProblemSeven" />
+        <item itemvalue="Application.ProblemTen" />
       </list>
     </recent_temporary>
   </component>

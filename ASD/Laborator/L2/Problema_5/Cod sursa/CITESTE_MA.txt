@@ -1,0 +1,4 @@
+Preferabil codul sa fie rulat folosind Visual Studio 2019 pentru a evita problemele de compatibilitate.
+Sursa: https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16
+
+Altfel pot fi importate fisierele .cpp si .h in alt editor.

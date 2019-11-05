@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1571414599 source:c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\io_i.cpp
+	"IO_I.h"
+
+1571414599 c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\io_i.h
+	"Readable_I.h"
+	"Printable_I.h"
+
+1571414599 c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\readable_i.h
+	<istream>
+
+1571414599 c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\printable_i.h
+	<ostream>
+
+1571414599 source:c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\printable_i.cpp
+	"Printable_I.h"
+
+1571414599 source:c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\readable_i.cpp
+	"Readable_I.h"
+
+1571414599 source:c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\simplelist.cpp
+
+1571414599 source:c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\simplenode.cpp
+	"SimpleNode.h"
+
+1571481119 c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\simplenode.h
+
+1571428719 source:c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\calclist.cpp
+	"CalcList.h"
+
+1571481515 c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\calclist.h
+	"SimpleList.h"
+
+1572978368 c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\simplelist.h
+	<iostream>
+	<exception>
+	"List.h"
+	"SimpleNode.h"
+
+1571489379 c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\list.h
+	"IO_I.h"
+	"SimpleNode.h"
+
+1571414599 source:c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\list.cpp
+	"SimpleList.h"
+
+1572977178 source:c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\tema_2_problema_5.cpp
+	"BigNumber.h"
+
+1571509803 c:\users\anonymousclass\desktop\andrei_ionescu_cti_252\cod sursa\tema_2_problema_5\bignumber.h
+	"SimpleList.h"
+	"IO_I.h"
+

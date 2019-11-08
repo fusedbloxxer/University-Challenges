@@ -91,6 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -153,15 +154,27 @@
   <ItemGroup>
     <ClCompile Include="Complex.cpp" />
     <ClCompile Include="IO_I.cpp" />
+    <ClCompile Include="NegativeSizeException.cpp" />
+    <ClCompile Include="PopException.cpp" />
     <ClCompile Include="Printable_I.cpp" />
+    <ClCompile Include="PureImag_I.cpp" />
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Readable_I.cpp" />
+    <ClCompile Include="Stiva.cpp" />
     <ClCompile Include="Tema_2.cpp" />
+    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Complex.h" />
     <ClInclude Include="IO_I.h" />
+    <ClInclude Include="NegativeSizeException.h" />
+    <ClInclude Include="PopException.h" />
     <ClInclude Include="Printable_I.h" />
+    <ClInclude Include="PureImag_I.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="Readable_I.h" />
+    <ClInclude Include="Stiva.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

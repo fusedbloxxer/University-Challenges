@@ -116,9 +116,8 @@ public class GenericList<T> {
     }
 
     public void clear() {
-        while (head != null) {
-            removeFront();
-        }
+        head = tail = null;
+        size = 0;
     }
 
     public int size() {

@@ -2,7 +2,6 @@ package probleme.liste;
 
 import structures.GenericList;
 import structures.GenericNode;
-import structures.SimpleList;
 
 import java.util.stream.IntStream;
 

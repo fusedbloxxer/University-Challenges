@@ -15,4 +15,8 @@ public interface Container {
     void print();
 
     boolean empty();
+
+    static void push(int a, Container container) {
+        container.push(a);
+    }
 }

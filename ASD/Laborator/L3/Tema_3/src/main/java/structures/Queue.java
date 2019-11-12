@@ -41,6 +41,14 @@ public class Queue implements Container {
         }
     }
 
+    public int peekTail() throws PeekException {
+        if (tail == null) {
+            throw new PeekException();
+        } else {
+            return tail.getValue();
+        }
+    }
+
     public int search(int element) {
         SimpleNode node = head;
         int index = 0;

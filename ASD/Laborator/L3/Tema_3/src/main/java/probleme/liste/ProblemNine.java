@@ -9,8 +9,11 @@ public class ProblemNine {
         SimpleList list = new SimpleList();
         IntStream.range(0, 10).forEach(list::pushBack);
 
+        System.out.print("Initial - ");
         list.print();
+        System.out.print("Reversed, with memory - ");
         list.reverse(true);
+        System.out.print("Reversed, no memory - ");
         list.reverse(false);
     }
 }

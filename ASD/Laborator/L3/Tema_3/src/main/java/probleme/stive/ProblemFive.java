@@ -21,22 +21,29 @@ public class ProblemFive {
             try {
                 for (String string : list.get(i).split("\\s")) {
                     if (!isNumber(string)) {
+                        int a = 0, b = stack.pop();
+                        try {
+                            a = stack.pop();
+                        } catch (PopException ex) {
+                            if (string.charAt(0) != '+' && string.charAt(0) != '-') {
+                                throw ex;
+                            }
+                        }
+
                         switch (string.charAt(0)) {
                             case '+':
-                                stack.push(stack.pop() + stack.pop());
+                                stack.push(a + b);
                                 break;
                             case '-':
-                                stack.push(-stack.pop() + stack.pop());
+                                stack.push(a - b);
                                 break;
                             case '*':
-                                stack.push(stack.pop() * stack.pop());
+                                stack.push(a * b);
                                 break;
                             case '/':
-                                stack.push((int) ((1 / (double) stack.pop()) * stack.pop()));
+                                stack.push(a / b);
                                 break;
                             case '%': {
-                                int b = stack.pop();
-                                int a = stack.pop();
                                 stack.push(a % b);
                             }
                             break;

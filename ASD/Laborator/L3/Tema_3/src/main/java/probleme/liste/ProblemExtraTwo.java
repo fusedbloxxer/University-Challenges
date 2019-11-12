@@ -10,9 +10,11 @@ public class ProblemExtraTwo {
     public static void main(String[] args) throws Exception {
         GenericList<Integer> list = new GenericList<>();
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Insert lower bound and upper bound: ");
         IntStream.range(scanner.nextInt(), scanner.nextInt() + 1)
                 .forEach(list::pushBack);
         list.print();
+        System.out.print("Enter k: ");
         System.out.println(circular(list, scanner.nextInt()));
     }
 

@@ -11,11 +11,14 @@ public class ProblemTen {
         GenericList<Integer> B = new GenericList<>();
         IntStream.range(3, 10).forEach(A::pushBack);
         IntStream.range(2, 9).forEach(B::pushBack);
+        System.out.print("A - ");
         A.print();
+        System.out.print("B - ");
         B.print();
 
         // TODO: Check if it is correct ?
         GenericList<Integer> C = mergeLists(A, B);
+        System.out.print("C - ");
         C.print();
     }
 

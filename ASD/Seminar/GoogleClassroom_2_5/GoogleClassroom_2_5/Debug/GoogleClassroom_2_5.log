@@ -1,0 +1,3 @@
+﻿  GoogleClassroom_2_5.cpp
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Seminar\GoogleClassroom_2_5\GoogleClassroom_2_5\GoogleClassroom_2_5.cpp(77,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  GoogleClassroom_2_5.vcxproj -> C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Seminar\GoogleClassroom_2_5\Debug\GoogleClassroom_2_5.exe

@@ -1,23 +1,20 @@
 package structures;
 
-public class Node <T> {
+public class Node<T> {
     private T value;
     private Node<T> left, right;
 
-    public Node() {
-    }
-
-    public Node(T value) {
+    Node(T value) {
         this(value, null, null);
     }
 
-    public Node(T value, Node<T> left, Node<T> right) {
+    private Node(T value, Node<T> left, Node<T> right) {
         this.value = value;
         this.left = left;
         this.right = right;
     }
 
-    public T getValue() {
+    T getValue() {
         return value;
     }
 
@@ -25,24 +22,32 @@ public class Node <T> {
         this.value = value;
     }
 
-    public Node<T> getLeft() {
+    Node<T> getLeft() {
         return left;
     }
 
-    public void setLeft(Node<T> left) {
+    void setLeft(Node<T> left) {
         this.left = left;
     }
 
-    public Node<T> getRight() {
+    Node<T> getRight() {
         return right;
     }
 
-    public void setRight(Node<T> right) {
+    void setRight(Node<T> right) {
         this.right = right;
+    }
+
+    boolean hasLeft() {
+        return left != null;
+    }
+
+    boolean hasRight() {
+        return right != null;
     }
 
     @Override
     public String toString() {
-        return value + "";
+        return value + " ";
     }
 }

@@ -1,9 +1,9 @@
 package structures;
 
 public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> {
-    private Node<T> root;
+    Node<T> root;
 
-    private void insert(Node<T> node, T key) {
+    void insert(Node<T> node, T key) {
         if (key.compareTo(node.getValue()) < 0) {
             if (node.hasLeft()) {
                 insert(node.getLeft(), key);
@@ -17,7 +17,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
         }
     }
 
-    private int search(Node<T> node, T key) {
+    int search(Node<T> node, T key) {
         if (node != null) {
             int comparison = key.compareTo(node.getValue());
             if (comparison == 0) {
@@ -31,14 +31,14 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
         return 0;
     }
 
-    private T findMax(Node<T> node) {
+    T findMax(Node<T> node) {
         if (node.hasRight()) {
             return findMax(node.getRight());
         }
         return node.getValue();
     }
 
-    private void rsd(Node<T> node) {
+    void rsd(Node<T> node) {
         if (node != null) {
             System.out.print(node + " ");
             rsd(node.getLeft());
@@ -46,7 +46,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
         }
     }
 
-    private void srd(Node<T> node) {
+    void srd(Node<T> node) {
         if (node != null) {
             srd(node.getLeft());
             System.out.print(node + " ");
@@ -54,7 +54,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
         }
     }
 
-    private void sdr(Node<T> node) {
+    void sdr(Node<T> node) {
         if (node != null) {
             sdr(node.getLeft());
             sdr(node.getRight());
@@ -62,16 +62,12 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
         }
     }
 
-    private void delete(Node<T> node, T key) {
+    void delete(Node<T> node, T key) {
         if (key.compareTo(node.getValue()) < 0) {
             if (node.hasLeft()) {
                 if (key.compareTo(node.getLeft().getValue()) == 0) {
-                    int count = node.getLeft().getCount();
 
-                    if (count == 0) {
-                        // Is Leaf
-                        node.setLeft(null);
-                    } else if (count == 1) {
+                    if (node.getLeft().getCount() <= 1) {
                         // Has 1 child
                         if (node.getLeft().hasLeft()) {
                             node.setLeft(node.getLeft().getLeft());
@@ -104,12 +100,8 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
             }
         } else if (node.hasRight()) {
             if (key.compareTo(node.getRight().getValue()) == 0) {
-                int count = node.getRight().getCount();
 
-                if (count == 0) {
-                    // Is Leaf
-                    node.setRight(null);
-                } else if (count == 1) {
+                if (node.getRight().getCount() <= 1) {
                     // Has 1 child
                     if (node.getRight().hasLeft()) {
                         node.setRight(node.getRight().getLeft());
@@ -178,7 +170,6 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
         return search(root, key);
     }
 
-    @Override
     public T findMax() {
         return root == null ? null : findMax(root);
     }
@@ -202,12 +193,8 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
     public void delete(T key) {
         if (root != null) {
             if (key.compareTo(root.getValue()) == 0) {
-                int count = root.getCount();
 
-                if (count == 0) {
-                    // Is Leaf
-                    root = null;
-                } else if (count == 1) {
+                if (root.getCount() == 1) {
                     // Has 1 child
                     if (root.hasLeft()) {
                         root = root.getLeft();

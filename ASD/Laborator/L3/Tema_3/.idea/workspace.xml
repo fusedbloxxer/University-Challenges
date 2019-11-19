@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="539be2e9-adbf-4caa-acbd-ef8fa0e57e7f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/probleme/cozi/ProblemEight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/Tema4.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/src/main/java/ProblemOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/src/main/java/structures/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/src/main/java/structures/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../L4/Tema4/src/main/java/structures/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/probleme/liste/ProblemExtraTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/probleme/liste/ProblemExtraTwo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/probleme/liste/ProblemNine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/probleme/liste/ProblemNine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/probleme/liste/ProblemTen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/probleme/liste/ProblemTen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/probleme/stive/ProblemFive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/probleme/stive/ProblemFive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/structures/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/structures/Queue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pins.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/postfix.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/postfix.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/postfix.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/postfix.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/probleme/stive/ProblemFive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/probleme/stive/ProblemFive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/structures/Container.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/structures/Container.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/structures/Queue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/structures/Queue.class" afterDir="false" />
-    </list>
+    <list default="true" id="539be2e9-adbf-4caa-acbd-ef8fa0e57e7f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

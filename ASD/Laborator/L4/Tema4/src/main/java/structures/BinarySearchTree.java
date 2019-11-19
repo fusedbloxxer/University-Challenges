@@ -66,15 +66,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
         if (key.compareTo(node.getValue()) < 0) {
             if (node.hasLeft()) {
                 if (key.compareTo(node.getLeft().getValue()) == 0) {
-                    int count = 0;
-
-                    if (node.getLeft().hasLeft()) {
-                        ++count;
-                    }
-
-                    if (node.getLeft().hasRight()) {
-                        ++count;
-                    }
+                    int count = node.getLeft().getCount();
 
                     if (count == 0) {
                         // Is Leaf
@@ -112,15 +104,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
             }
         } else if (node.hasRight()) {
             if (key.compareTo(node.getRight().getValue()) == 0) {
-                int count = 0;
-
-                if (node.getRight().hasLeft()) {
-                    ++count;
-                }
-
-                if (node.getRight().hasRight()) {
-                    ++count;
-                }
+                int count = node.getRight().getCount();
 
                 if (count == 0) {
                     // Is Leaf
@@ -218,15 +202,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements BinaryTree<T> 
     public void delete(T key) {
         if (root != null) {
             if (key.compareTo(root.getValue()) == 0) {
-                int count = 0;
-
-                if (root.hasLeft()) {
-                    ++count;
-                }
-
-                if (root.hasRight()) {
-                    ++count;
-                }
+                int count = root.getCount();
 
                 if (count == 0) {
                     // Is Leaf

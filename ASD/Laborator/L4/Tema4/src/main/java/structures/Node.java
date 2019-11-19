@@ -50,4 +50,18 @@ public class Node<T> {
     public String toString() {
         return value + " ";
     }
+
+    public int getCount() {
+        int count = 0;
+
+        if (left != null) {
+            ++count;
+        }
+
+        if (right != null) {
+            ++count;
+        }
+
+        return count;
+    }
 }

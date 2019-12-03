@@ -8,7 +8,6 @@ class DoubleNode;
 template<typename T = int>
 class AVL
 {
-	bool isBalanced;
 	DoubleNode<T>* root;
 
 	template<typename U>
@@ -27,8 +26,9 @@ public:
 	void add(const T& value);
 	void rsd(std::ostream& os = std::cout);
 	void srd(std::ostream& os = std::cout);
+	void drs(std::ostream& os = std::cout);
 
-	virtual ~AVL() = default;
+	virtual ~AVL();
 
 private:
 	bool dsi(int a, int b) const;
@@ -38,20 +38,19 @@ private:
 	void add(DoubleNode<T>*& node, const T& value);
 	void rsd(const DoubleNode<T>* node, std::ostream& os = std::cout);
 	void srd(const DoubleNode<T>* node, std::ostream& os = std::cout);
+	void drs(const DoubleNode<T>* node, std::ostream& os = std::cout);
 };
 
 template<typename T>
 inline AVL<T>::AVL()
-	:root{ nullptr }, isBalanced{ true }
+	:root{ nullptr }
 {
 }
 
 template<typename T>
 inline void AVL<T>::add(const T& value)
 {
-	isBalanced = false;
 	add(root, value);
-	update(root);
 }
 
 template<typename T>
@@ -64,6 +63,40 @@ template<typename T>
 inline void AVL<T>::srd(std::ostream& os)
 {
 	srd(root);
+}
+
+template<typename T>
+inline void AVL<T>::drs(std::ostream& os)
+{
+	drs(root, os);
+}
+
+template<typename T>
+inline AVL<T>::~AVL()
+{
+	Stack<DoubleNode<T>*> stack;
+
+	if (root)
+	{
+		stack.push(root);
+
+		while (!stack.empty())
+		{
+			DoubleNode<T>* temp = stack.pop();
+
+			if (temp->left)
+			{
+				stack.push(temp->left);
+			}
+
+			if (temp->right)
+			{
+				stack.push(temp->right);
+			}
+
+			delete temp;
+		}
+	}
 }
 
 template<typename T>
@@ -116,7 +149,7 @@ inline void AVL<T>::add(DoubleNode<T>*& node, const T& value)
 		}
 
 		// The node was inserted
-		if (abs(node->bal) > 1 && !isBalanced)
+		if (abs(node->bal) > 1)
 		{
 			if (dsi(node->bal, node->left->bal))
 			{
@@ -145,8 +178,6 @@ inline void AVL<T>::add(DoubleNode<T>*& node, const T& value)
 
 				leftToRight(node->left);
 			}
-
-			isBalanced = true;
 		}
 	}
 	else
@@ -163,7 +194,7 @@ inline void AVL<T>::add(DoubleNode<T>*& node, const T& value)
 		}
 
 		// The node was inserted
-		if (abs(node->bal) > 1 && !isBalanced)
+		if (abs(node->bal) > 1)
 		{
 			if (dsi(node->bal, node->right->bal))
 			{
@@ -192,8 +223,6 @@ inline void AVL<T>::add(DoubleNode<T>*& node, const T& value)
 
 				rightToLeft(node);
 			}
-
-			isBalanced = true;
 		}
 	}
 }
@@ -254,8 +283,8 @@ inline void AVL<T>::rsd(const DoubleNode<T>* node, std::ostream& os)
 	if (node)
 	{
 		os << *node << ' ';
-		rsd(node->left);
-		rsd(node->right);
+		rsd(node->left, os);
+		rsd(node->right, os);
 	}
 }
 
@@ -264,9 +293,20 @@ inline void AVL<T>::srd(const DoubleNode<T>* node, std::ostream& os)
 {
 	if (node)
 	{
-		srd(node->left);
+		srd(node->left, os);
 		os << *node << ' ';
-		srd(node->right);
+		srd(node->right, os);
+	}
+}
+
+template<typename T>
+inline void AVL<T>::drs(const DoubleNode<T>* node, std::ostream& os)
+{
+	if (node)
+	{
+		drs(node->right, os);
+		os << node->value << ' ';
+		drs(node->left, os);
 	}
 }
 

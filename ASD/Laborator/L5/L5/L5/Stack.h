@@ -28,6 +28,7 @@ public:
 	T pop();
 
 	virtual ~Stack();
+
 private:
 	void freeMemory();
 };

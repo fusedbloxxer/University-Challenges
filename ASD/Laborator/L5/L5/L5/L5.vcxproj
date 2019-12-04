@@ -153,6 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AVL.cpp" />
+    <ClCompile Include="Heap.cpp" />
     <ClCompile Include="L5.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Optim.cpp" />
@@ -164,6 +165,7 @@
     <ClInclude Include="AVL.h" />
     <ClInclude Include="DivideStrategy.h" />
     <ClInclude Include="DoubleNode.h" />
+    <ClInclude Include="Heap.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="MergeSort.h" />

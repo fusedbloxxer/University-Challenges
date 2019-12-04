@@ -1,5 +1,4 @@
-﻿  AVL.cpp
-  L5.cpp
+﻿  L5.cpp
 C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(22,13): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250:  'OptimMergeSort<int,InsertionSort<T>>': inherits 'DivideStrategy<T>::DivideStrategy<T>::sort' via dominance
 C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250:         with
@@ -42,7 +41,6 @@ C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5
 C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5\L5\Problems.h(45): message :         [
 C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5\L5\Problems.h(45): message :             T=int
 C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5\L5\Problems.h(45): message :         ]
-  Generating Code...
 C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5\L5\Problems.h(45): message :  see reference to class template instantiation 'QuickSort<int,InsertionSort<T>>' being compiled
 C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5\L5\Problems.h(45): message :         with
 C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\ASD\Laborator\L5\L5\L5\Problems.h(45): message :         [

@@ -42,6 +42,9 @@
     <ClCompile Include="Logger.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="Heap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Problems.h">
@@ -85,6 +88,9 @@
     </ClInclude>
     <ClInclude Include="OptimQuickSort.h">
       <Filter>Header Files\Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

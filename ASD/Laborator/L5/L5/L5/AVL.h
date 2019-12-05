@@ -1,6 +1,7 @@
 #pragma once
 #include "DoubleNode.h"
-#include "Stack.h"
+#include "Utils.h"
+#include "Queue.h"
 
 template<typename T>
 class DoubleNode;
@@ -31,7 +32,6 @@ public:
 	virtual ~AVL();
 
 private:
-	bool dsi(int a, int b) const;
 	int update(DoubleNode<T>* node);
 	void rightToLeft(DoubleNode<T>*& ptr);
 	void leftToRight(DoubleNode<T>*& ptr);
@@ -100,18 +100,6 @@ inline AVL<T>::~AVL()
 }
 
 template<typename T>
-inline bool AVL<T>::dsi(int a, int b) const
-{
-	return a * b < 0;
-}
-
-template<typename T>
-T max(T a, T b)
-{
-	return a > b ? a : b;
-}
-
-template<typename T>
 inline int AVL<T>::update(DoubleNode<T>* node)
 {
 	if (node != nullptr)
@@ -120,7 +108,7 @@ inline int AVL<T>::update(DoubleNode<T>* node)
 		int right = update(node->right);
 		node->bal = left - right;
 
-		return max(left, right) + 1;
+		return Utils::max(left, right) + 1;
 	}
 	else
 	{
@@ -149,9 +137,9 @@ inline void AVL<T>::add(DoubleNode<T>*& node, const T& value)
 		}
 
 		// The node was inserted
-		if (abs(node->bal) > 1)
+		if (Utils::abs(node->bal) > 1)
 		{
-			if (dsi(node->bal, node->left->bal))
+			if (Utils::dis(node->bal, node->left->bal))
 			{
 				// Double rotation: RIGHT-LEFT on t, LEFT-RIGHT on b 
 				//      b			 b       n
@@ -176,7 +164,7 @@ inline void AVL<T>::add(DoubleNode<T>*& node, const T& value)
 				//   / \
 				//  O   O
 
-				leftToRight(node->left);
+				leftToRight(node);
 			}
 		}
 	}
@@ -194,9 +182,9 @@ inline void AVL<T>::add(DoubleNode<T>*& node, const T& value)
 		}
 
 		// The node was inserted
-		if (abs(node->bal) > 1)
+		if (Utils::abs(node->bal) > 1)
 		{
-			if (dsi(node->bal, node->right->bal))
+			if (Utils::dis(node->bal, node->right->bal))
 			{
 				// Double rotation: LEFT-RIGHT on t, RIGHT-LEFT on b 
 				//    b         b                n   
@@ -245,8 +233,8 @@ inline void AVL<T>::rightToLeft(DoubleNode<T>*& ptr)
 	t->left = ptr;
 
 	// Change heights
-	ptr->bal = ptr->bal + (1 - (t->bal < 0 ? t->bal : 0));
-	t->bal = t->bal + (1 - (ptr->bal > 0 ? ptr->bal : 0));
+	ptr->bal += 1 - Utils::min(t->bal, 0);
+	t->bal += 1 + Utils::max(ptr->bal, 0);
 
 	// New "root"
 	ptr = t;
@@ -270,8 +258,8 @@ inline void AVL<T>::leftToRight(DoubleNode<T>*& ptr)
 	t->right = ptr;
 
 	// Change heights
-	ptr->bal = ptr->bal - (1 + (t->bal > 0 ? t->bal : 0));
-	t->bal = t->bal - (1 - (ptr->bal < 0 ? ptr->bal : 0));
+	ptr->bal -= 1 + Utils::max(t->bal, 0);
+	t->bal -= 1 - Utils::min(ptr->bal, 0);
 
 	// Change "root"
 	ptr = t;
@@ -313,29 +301,31 @@ inline void AVL<T>::drs(const DoubleNode<T>* node, std::ostream& os)
 template<typename U>
 inline std::ostream& operator<<(std::ostream& os, const AVL<U>& avl)
 {
-	Stack<DoubleNode<U>*> stack;
+	Container<DoubleNode<U>*>* container = new Queue<DoubleNode<U>*>();
 
 	if (avl.root)
 	{
-		stack.push(avl.root);
+		container->push(avl.root);
 
-		while (!stack.empty())
+		while (!container->empty())
 		{
-			DoubleNode<U>* temporary = stack.pop();
+			DoubleNode<U>* temporary = container->pop();
 
 			os << *temporary << ' ';
 
-			if (temporary->getRight())
-			{
-				stack.push(temporary->getRight());
-			}
-
 			if (temporary->getLeft())
 			{
-				stack.push(temporary->getLeft());
+				container->push(temporary->getLeft());
+			}
+
+			if (temporary->getRight())
+			{
+				container->push(temporary->getRight());
 			}
 		}
 	}
+
+	delete container;
 
 	return os;
 }

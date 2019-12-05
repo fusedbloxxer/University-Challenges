@@ -1,5 +1,6 @@
 #pragma once
 #include "SingleNode.h"
+#include "Container.h"
 #include <iostream>
 
 // Forward declaration to use template friends
@@ -7,7 +8,7 @@ template<typename T>
 class SingleNode;
 
 template<typename T>
-class Stack
+class Stack : public Container<T>
 {
 	SingleNode<T>* head;
 
@@ -23,9 +24,9 @@ public:
 	Stack<T>& operator=(const Stack<T>& stack);
 	Stack<T>& operator=(Stack<T>&& stack) noexcept;
 
-	bool empty() const;
-	void push(const T& value);
-	T pop();
+	T pop() override;
+	bool empty() const override;
+	void push(const T& value) override;
 
 	virtual ~Stack();
 
@@ -65,7 +66,7 @@ inline Stack<T>::Stack()
 
 template<typename T>
 inline Stack<T>::Stack(const Stack<T>& stack)
-	:head{ new SingleNode{ stack.head } } {}
+	: head{ new SingleNode{ stack.head } } {}
 
 template<typename T>
 inline Stack<T>::Stack(Stack<T>&& stack) noexcept

@@ -1,8 +1,9 @@
 #pragma once
 #include <stdexcept>
+#include "Container.h"
 
 template<typename T = int>
-class Heap
+class Heap : public Container<T>
 {
 	// Dynamic sized-array
 	enum Type { MAX = -1, MIN = 1 } type;
@@ -14,10 +15,10 @@ class Heap
 public:
 	Heap(Type type = Type::MIN);
 
-	void pop();
-	T find() const;
-	void insert(T& element);
-	void insert(T&& element);
+	T find();
+	virtual T pop() override;
+	virtual bool empty() const override;
+	virtual void push(const T& value) override;
 
 	virtual ~Heap();
 
@@ -30,7 +31,10 @@ private:
 	void shiftUp(int k);
 	void shiftDown(int k);
 
-	T* get(T* a, T* b) const;
+	// Comparison
+	bool compare(const T* a, const T* b) const;
+
+	int get(const int posA, const int posB) const;
 };
 
 template<typename T>
@@ -38,38 +42,27 @@ inline Heap<T>::Heap(Type type)
 	:type{ type }, size{ 0 }, index{ 0 }, ptrs{ nullptr } {}
 
 template<typename T>
-inline T Heap<T>::find() const
+inline void Heap<T>::push(const T& element)
+{
+	increase();
+
+	ptrs[index] = new T(element);
+	shiftUp(index);
+	++index;
+}
+
+template<typename T>
+inline T Heap<T>::find()
 {
 	if (index <= 0)
 	{
 		throw std::runtime_error{ "No elements available." };
 	}
 	return **ptrs;
-
 }
 
 template<typename T>
-inline void Heap<T>::insert(T& element)
-{
-	increase();
-
-	ptrs[index] = &element;
-	shiftUp(index);
-	++index;
-}
-
-template<typename T>
-inline void Heap<T>::insert(T&& element)
-{
-	increase();
-
-	ptrs[index] = &element;
-	shiftUp(index);
-	++index;
-}
-
-template<typename T>
-inline void Heap<T>::pop()
+inline T Heap<T>::pop()
 {
 	if (index <= 0)
 	{
@@ -78,10 +71,14 @@ inline void Heap<T>::pop()
 	else if (index == 1)
 	{
 		--index;
+		delete ptrs[index];
 	}
 	else
 	{
+		T* temp = ptrs[0];
 		ptrs[0] = ptrs[--index];
+		delete temp;
+
 		shiftDown(0);
 	}
 
@@ -89,8 +86,18 @@ inline void Heap<T>::pop()
 }
 
 template<typename T>
+inline bool Heap<T>::empty() const
+{
+	return index == 0;
+}
+
+template<typename T>
 inline Heap<T>::~Heap()
 {
+	for (int i = 0; i < index; ++i)
+	{
+		delete ptrs[i];
+	}
 	delete[] ptrs;
 }
 
@@ -101,7 +108,7 @@ inline void Heap<T>::shiftUp(int k)
 	{
 		int parent = (k - 1) / 2;
 
-		if ((*ptrs[k] - *ptrs[parent]) * type < 0)
+		if (compare(ptrs[k], ptrs[parent]))
 		{
 			// Swap pointers
 			T* aux = ptrs[k];
@@ -117,18 +124,39 @@ inline void Heap<T>::shiftUp(int k)
 template<typename T>
 inline void Heap<T>::shiftDown(int k)
 {
+	if (int first = 2 * k + 1; first < index)
+	{
+		int pos = get(k, first);
+
+		if (int second = 2 * k + 2; second < index)
+		{
+			pos = get(k, second);
+		}
+
+		if (pos != k)
+		{
+			T* aux = ptrs[k];
+			ptrs[k] = ptrs[pos];
+			ptrs[pos] = aux;
+
+			shiftDown(pos);
+		}
+	}
 }
 
 template<typename T>
-inline T* Heap<T>::get(T* a, T* b) const
+inline bool Heap<T>::compare(const T* a, const T* b) const
 {
-	if ((*a - *b) * type < 0)
-	{
-		return a;
-	}
-	{
-		return b;
-	}
+	return (*a < *b && type == Type::MIN)
+		|| (*a > *b && type == Type::MAX);
+}
+
+template<typename T>
+inline int Heap<T>::get(const int posA, const int posB) const
+{
+	if (compare(ptrs[posA], ptrs[posB]))
+		return posA;
+	return posB;
 }
 
 template<typename T>
@@ -162,8 +190,7 @@ inline void Heap<T>::increase()
 template<typename T>
 inline void Heap<T>::decrease()
 {
-	/*
-	if (index < 0.2 * size)
+	if (index < 0.25 * size)
 	{
 		size /= 2;
 
@@ -179,7 +206,6 @@ inline void Heap<T>::decrease()
 
 		ptrs = temporary;
 	}
-	*/
 }
 
 template<typename U>

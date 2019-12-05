@@ -6,16 +6,20 @@
 
 void problemOne()
 {
-	AVL<std::string> words;
-	int n; std::cin >> n;
-	for (int i = 0; i < n; ++i)
+	AVL<int> words; int n; 
+	std::cin >> n;
+
+	for (int i = 0, word; i < n; ++i)
 	{
-		std::string word; std::cin >> word;
+		std::cin >> word;
 		words.add(word);
+		std::cout << "AFTER: \n" << words << '\n';
 	}
 
-	std::cout << '\n';
-	words.rsd(); std::cout << '\n';
+	std::cout << "RSD: ";
+	words.rsd(); 
+
+	std::cout << "SRD: ";
 	words.srd();
 }
 
@@ -48,16 +52,17 @@ void sortingMethods()
 	Logger::e("OptimQuickSort:\n"); testStrategy(elements, length, new OptimQuickSort<int>);
 }
 
-void problemThree()
+void problemFive()
 {
 	AVL<std::string> words;
 	int n; std::cin >> n;
 	for (int i = 0; i < n; ++i)
 	{
-		std::string word; std::cin >> word;
+		std::string word; 
+		std::cin >> word;
 		words.add(word);
 	}
 
 	std::cout << '\n';
-	words.drs(); std::cout << '\n' << words;
+	words.drs();
 }

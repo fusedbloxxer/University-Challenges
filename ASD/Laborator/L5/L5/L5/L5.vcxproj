@@ -159,10 +159,12 @@
     <ClCompile Include="Optim.cpp" />
     <ClCompile Include="OptimMergeSort.cpp" />
     <ClCompile Include="OptimQuickSort.cpp" />
+    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="QuickSort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AVL.h" />
+    <ClInclude Include="Container.h" />
     <ClInclude Include="DivideStrategy.h" />
     <ClInclude Include="DoubleNode.h" />
     <ClInclude Include="Heap.h" />
@@ -173,10 +175,12 @@
     <ClInclude Include="OptimMergeSort.h" />
     <ClInclude Include="OptimQuickSort.h" />
     <ClInclude Include="Problems.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="QuickSort.h" />
     <ClInclude Include="SingleNode.h" />
     <ClInclude Include="SortStrategy.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

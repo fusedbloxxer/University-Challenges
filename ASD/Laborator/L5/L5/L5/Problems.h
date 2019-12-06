@@ -46,12 +46,11 @@ void sortingMethods()
 	// Logger::setMode(0);
 	// Logger::setMode(8);
 	// Logger::setMode(12);
-	Logger::e("MergeSort:\n"); testStrategy(elements, length, new MergeSort<int>);
-	Logger::e("QuickSort:\n"); testStrategy(elements, length, new QuickSort<int>);
 	Logger::e("HeapSort:\n"); testStrategy(elements, length, new HeapSort<int>);
-	// Logger::e("InsertionSort:\n"); testStrategy(elements, length, new InsertionSort<int>);
-	Logger::e("OptimMergeSort:\n"); testStrategy(elements, length, new OptimMergeSort<int>);
-	Logger::e("OptimQuickSort:\n"); testStrategy(elements, length, new OptimQuickSort<int>);
+	Logger::e("MergeSort:\n"); testStrategy(elements, length, new MergeSort<int>);
+	// Logger::e("QuickSort:\n"); testStrategy(elements, length, new QuickSort<int>);
+	// Logger::e("OptimMergeSort:\n"); testStrategy(elements, length, new OptimMergeSort<int>);
+	// Logger::e("OptimQuickSort:\n"); testStrategy(elements, length, new OptimQuickSort<int>);
 }
 
 void problemFive()

@@ -19,7 +19,6 @@ public:
 	T find();
 	virtual T pop() override;
 	virtual bool empty() const override;
-	void push(T& value);
 	virtual void push(const T& value) override;
 
 	virtual ~Heap();
@@ -72,18 +71,32 @@ inline T Heap<T>::pop()
 	else if (index == 1)
 	{
 		--index;
+		
+		// Make a copy
+		T temporary = *ptrs[index];
+		// Free memory
 		delete ptrs[index];
+		// Decrease size
+		decrease();
+
+		// Return the copy
+		return temporary;
 	}
 	else
 	{
-		T* temp = ptrs[0];
+		T* aux = ptrs[0];
+		T temporary = *aux;
+
+		// Free memory
 		ptrs[0] = ptrs[--index];
-		delete temp;
-
+		delete aux;
+		// Order element
 		shiftDown(0);
-	}
+		// Decrease size
+		decrease();
 
-	decrease();
+		return temporary;
+	}
 }
 
 template<typename T>
@@ -131,7 +144,7 @@ inline void Heap<T>::shiftDown(int k)
 
 		if (int second = 2 * k + 2; second < index)
 		{
-			pos = get(k, second);
+			pos = get(pos, second);
 		}
 
 		if (pos != k)
@@ -191,7 +204,7 @@ inline void Heap<T>::increase()
 template<typename T>
 inline void Heap<T>::decrease()
 {
-	if (index < 0.25 * size)
+	if (index <= 0.25 * size)
 	{
 		size /= 2;
 

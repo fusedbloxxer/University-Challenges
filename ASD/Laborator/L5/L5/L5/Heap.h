@@ -6,18 +6,20 @@ template<typename T = int>
 class Heap : public Container<T>
 {
 	// Dynamic sized-array
-	enum Type { MAX = -1, MIN = 1 } type;
 	T** ptrs; int index, size;
 
 	template<typename U>
 	friend std::ostream& operator<<(std::ostream& os, const Heap<U>& heap);
 
 public:
+	enum Type { MAX = -1, MIN = 1 } type;
+
 	Heap(Type type = Type::MIN);
 
 	T find();
 	virtual T pop() override;
 	virtual bool empty() const override;
+	void push(T& value);
 	virtual void push(const T& value) override;
 
 	virtual ~Heap();
@@ -45,7 +47,6 @@ template<typename T>
 inline void Heap<T>::push(const T& element)
 {
 	increase();
-
 	ptrs[index] = new T(element);
 	shiftUp(index);
 	++index;
@@ -148,7 +149,7 @@ template<typename T>
 inline bool Heap<T>::compare(const T* a, const T* b) const
 {
 	return (*a < *b && type == Type::MIN)
-		|| (*a > *b && type == Type::MAX);
+		|| (*a > * b && type == Type::MAX);
 }
 
 template<typename T>

@@ -27,46 +27,37 @@ inline void MergeSort<T>::divide(T* elements, int left, int right) const
 template<typename T>
 inline void MergeSort<T>::merge(T* elements, int left, int middle, int right) const
 {
-	int leftSize = middle - left + 1;
-	int rightSize = right - middle;
+	T* aux = new T[right - left + 1];
 
-	T* leftArr = new T[leftSize];
-	T* rightArr = new T[rightSize];
+	int k = 0, i = left, j = middle + 1;
 
-	for (int i = 0; i < leftSize; ++i)
+	while (i <= middle && j <= right)
 	{
-		leftArr[i] = elements[i + left];
-	}
-
-	for (int i = 0; i < rightSize; ++i)
-	{
-		rightArr[i] = elements[i + middle + 1];
-	}
-
-	int k = left, i = 0, j = 0;
-
-	while (i < leftSize && j < rightSize)
-	{
-		if (leftArr[i] < rightArr[j])
+		if (elements[i] < elements[j])
 		{
-			elements[k++] = leftArr[i++];
+			aux[k++] = elements[i++];
 		}
 		else
 		{
-			elements[k++] = rightArr[j++];
+			aux[k++] = elements[j++];
 		}
 	}
 
-	while (i < leftSize)
+	while (i <= middle)
 	{
-		elements[k++] = leftArr[i++];
+		aux[k++] = elements[i++];
 	}
 
-	while (j < rightSize)
+	while (j <= right)
 	{
-		elements[k++] = rightArr[j++];
+		aux[k++] = elements[j++];
 	}
 
-	delete[] leftArr;
-	delete[] rightArr;
+
+	for (auto i = left; i <= right; ++i)
+	{
+		elements[i] = aux[i - left];
+	}
+
+	delete[] aux;
 }

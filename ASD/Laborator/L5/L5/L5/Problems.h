@@ -7,21 +7,20 @@
 
 void problemOne()
 {
-	AVL<int> words; int n;
-	std::cin >> n;
+	AVL<int> numbers;
+	numbers.add(50);
+	numbers.add(40);
+	numbers.add(30);
+	numbers.add(35);
+	numbers.add(37);
+	numbers.add(39);
+	numbers.add(45);
+	numbers.add(55);
+	numbers.add(42);
 
-	for (int i = 0, word; i < n; ++i)
-	{
-		std::cin >> word;
-		words.add(word);
-		std::cout << "AFTER: \n" << words << '\n';
-	}
-
-	std::cout << "RSD: ";
-	words.rsd();
-
-	std::cout << "SRD: ";
-	words.srd();
+	numbers.rsd();
+	std::cout << std::endl;
+	numbers.srd();
 }
 
 void testStrategy(int* elements, int length, SortStrategy<int>* strategy)
@@ -40,17 +39,18 @@ void testStrategy(int* elements, int length, SortStrategy<int>* strategy)
 
 void sortingMethods()
 {
-	constexpr int length = 28;
+	constexpr int length = 28, length2 = 7;
 	int elements[] = { 5, 6, 9, 11, 3, 12, -2, -2, 4, 3, 2, -2, 1, 1, 5, 6, 9, 11, 3, 12, -2, -2, 4, 3, 2, -2, 1, 1 };
+	int elements2[] = { 5, 6, 9, 11, 3, 12, -2 };
 
 	// Logger::setMode(0);
 	// Logger::setMode(8);
 	// Logger::setMode(12);
-	Logger::e("HeapSort:\n"); testStrategy(elements, length, new HeapSort<int>);
-	Logger::e("MergeSort:\n"); testStrategy(elements, length, new MergeSort<int>);
-	Logger::e("QuickSort:\n"); testStrategy(elements, length, new QuickSort<int>);
-	Logger::e("OptimMergeSort:\n"); testStrategy(elements, length, new OptimMergeSort<int>);
-	Logger::e("OptimQuickSort:\n"); testStrategy(elements, length, new OptimQuickSort<int>);
+	Logger::e("HeapSort:\n"); testStrategy(elements2, length2, new HeapSort<int>);
+	Logger::e("MergeSort:\n"); testStrategy(elements2, length2, new MergeSort<int>);
+	Logger::e("QuickSort:\n"); testStrategy(elements2, length2, new QuickSort<int>);
+	Logger::e("OptimMergeSort:\n"); testStrategy(elements, length, new OptimMergeSort<int, InsertionSort<int>>);
+	Logger::e("OptimQuickSort:\n"); testStrategy(elements2, length2, new OptimQuickSort<int>);
 }
 
 void problemFive()

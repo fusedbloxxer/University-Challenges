@@ -167,6 +167,9 @@ inline void AVL<T>::add(DoubleNode<T>*& node, const T& value)
 				leftToRight(node);
 			}
 		}
+
+		update(root);
+		return;
 	}
 	else
 	{
@@ -212,6 +215,9 @@ inline void AVL<T>::add(DoubleNode<T>*& node, const T& value)
 				rightToLeft(node);
 			}
 		}
+
+		update(root);
+		return;
 	}
 }
 

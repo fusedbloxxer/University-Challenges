@@ -1,7 +1,4 @@
-﻿  AVL.cpp
-  Heap.cpp
-  HeapSort.cpp
-  L5.cpp
+﻿  L5.cpp
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(22,13): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250:  'OptimMergeSort<int,InsertionSort<T>>': inherits 'DivideStrategy<T>::DivideStrategy<T>::sort' via dominance
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250:         with
@@ -44,18 +41,9 @@ C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(5
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         [
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :             T=int
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         ]
-  Logger.cpp
-  Optim.cpp
-  OptimMergeSort.cpp
-  OptimQuickSort.cpp
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :  see reference to class template instantiation 'QuickSort<int,InsertionSort<T>>' being compiled
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         with
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         [
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :             T=int
 C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         ]
-  Queue.cpp
-  QuickSort.cpp
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(22,13): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Generating Code...
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(22,13): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   L5.vcxproj -> C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\Debug\L5.exe

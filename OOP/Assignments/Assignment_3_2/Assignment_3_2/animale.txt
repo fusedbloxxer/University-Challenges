@@ -1,0 +1,12 @@
+3
+anImal
+Caine
+4 5.23 20.33 1 TERESTRU 25 40 5
+
+animal
+Rata
+4 5 20.33 1 TERESTRU 25 40 5
+
+animal
+Pisica
+4 5 20.33 2 TERESTRU ACVATIC 25 40 5

@@ -3,13 +3,12 @@
 #include <string>
 #include <cctype>
 
-class AnimalFactory
+class  AnimalFactory final
 {
+	AnimalFactory();
+
 public:
 	static Animal* newInstance(std::string);
 	static Animal* newInstance(std::istream& is);
-
-private:
-	static void toLowerCase(std::string& str);
 };
 

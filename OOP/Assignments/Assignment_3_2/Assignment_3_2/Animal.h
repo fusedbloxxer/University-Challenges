@@ -29,6 +29,9 @@ public:
 	// Methods
 	virtual void afisare(std::ostream& os) const;
 	virtual void citire(std::istream& is);
+	virtual void respira() const = 0;
+	virtual void mananca() const = 0;
+	virtual void sunet() const = 0;
 
 	// Virtual destructor
 	virtual ~Animal();

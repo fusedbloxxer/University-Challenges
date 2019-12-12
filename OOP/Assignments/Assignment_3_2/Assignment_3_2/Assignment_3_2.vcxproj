@@ -154,15 +154,25 @@
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="AnimalFactory.cpp" />
     <ClCompile Include="AnimalNevertebrat.cpp" />
+    <ClCompile Include="AnimalVertebrat.cpp" />
     <ClCompile Include="Assignment_3_2.cpp" />
+    <ClCompile Include="Peste.cpp" />
+    <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="AnimalFactory.h" />
     <ClInclude Include="AnimalNevertebrat.h" />
+    <ClInclude Include="AnimalVertebrat.h" />
+    <ClInclude Include="Peste.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="animale.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Assignment_3_2.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

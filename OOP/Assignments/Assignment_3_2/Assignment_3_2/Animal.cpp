@@ -84,9 +84,22 @@ void Animal::afisare(std::ostream& os) const
 		<< gramatica(durataDeViata[1], "luna", "luni") << gramatica(durataDeViata[2], "zi", "zile")
 		<< " numar picioare: " << numarPicioare << ", medii de viata: ";
 
-	for (const auto& mediu : medii)
+	if (medii.size() == 0)
 	{
-		os << mediuToStr(mediu) << ' ';
+		os << "nu are";
+	}
+	else
+	{
+		decltype(medii.size()) count = 0;
+		for (std::unordered_set<Mediu>::iterator it = medii.begin(); it != medii.end(); ++it, ++count)
+		{
+			os << mediuToStr(*it);
+
+			if (count + 1 != medii.size())
+			{
+				os << ", ";
+			}
+		}
 	}
 }
 

@@ -13,13 +13,14 @@ int main()
 		abort();
 	}
 
-	int x; input >> x;
+	int x; input >> x; char ch; input.get(ch);
 	std::list<Animal*> animale;
 
-	while (x--)
+	while (x)
 	{
 		animale.push_back(AnimalFactory::newInstance(input));
 		std::cout << *animale.back() << '\n';
+		x--;
 	}
 
 	for (auto& e : animale)

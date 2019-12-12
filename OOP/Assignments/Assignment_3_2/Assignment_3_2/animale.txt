@@ -1,12 +1,20 @@
-3
+4
 anImal
 Caine
 4 5.23 20.33 1 TERESTRU 25 40 5
 
-animal
+vertebrat
 Rata
 4 5 20.33 1 TERESTRU 25 40 5
 
-animal
+nevertebrat
 Pisica
-4 5 20.33 2 TERESTRU ACVATIC 25 40 5
+4 5 20.33 2 TERESTRU ACVATIC 25 40 5 unicelular
+
+nevertebrat
+Pisica
+4 5 20.33 2 TERESTRU ACVATIC 25 40 5 pluricelular
+
+nevertebrat
+Pisica
+4 5 20.33 2 TERESTRU ACVATIC 25 40 5 ciudat

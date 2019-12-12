@@ -1,2 +1,31 @@
 ﻿  Animal.cpp
-  Assignment_3_2.vcxproj -> C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Debug\Assignment_3_2.exe
+  AnimalFactory.cpp
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(16): error C2259:  'Animal': cannot instantiate abstract class
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(16): message :  due to following members:
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(16): message :  'void Animal::respira(void) const': is abstract
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\Animal.h(32): message :  see declaration of 'Animal::respira'
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(16): message :  'void Animal::mananca(void) const': is abstract
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\Animal.h(33): message :  see declaration of 'Animal::mananca'
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(16): message :  'void Animal::sunet(void) const': is abstract
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\Animal.h(34): message :  see declaration of 'Animal::sunet'
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(20): error C2259:  'AnimalVertebrat': cannot instantiate abstract class
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(20): message :  due to following members:
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(20): message :  'void Animal::respira(void) const': is abstract
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\Animal.h(32): message :  see declaration of 'Animal::respira'
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(20): message :  'void Animal::mananca(void) const': is abstract
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\Animal.h(33): message :  see declaration of 'Animal::mananca'
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(20): message :  'void Animal::sunet(void) const': is abstract
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\Animal.h(34): message :  see declaration of 'Animal::sunet'
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(24): error C2259:  'AnimalNevertebrat': cannot instantiate abstract class
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(24): message :  due to following members:
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(24): message :  'void Animal::respira(void) const': is abstract
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\Animal.h(32): message :  see declaration of 'Animal::respira'
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(24): message :  'void Animal::mananca(void) const': is abstract
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\Animal.h(33): message :  see declaration of 'Animal::mananca'
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalFactory.cpp(24): message :  'void Animal::sunet(void) const': is abstract
+  AnimalNevertebrat.cpp
+  AnimalVertebrat.cpp
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\Animal.h(34): message :  see declaration of 'Animal::sunet'
+  Assignment_3_2.cpp
+  Generating Code...
+C:\Users\AnonymousClass\WorkFolder\GIT\University-Challenges\OOP\Assignments\Assignment_3_2\Assignment_3_2\AnimalVertebrat.cpp(39,67): error C2059:  syntax error: ':'

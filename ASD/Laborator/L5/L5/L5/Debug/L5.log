@@ -1,49 +1,49 @@
 ﻿  L5.cpp
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(22,13): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250:  'OptimMergeSort<int,InsertionSort<T>>': inherits 'DivideStrategy<T>::DivideStrategy<T>::sort' via dominance
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250:         with
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250:         [
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250:             T=int
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250:         ]
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :  see declaration of 'DivideStrategy<T>::sort'
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :         with
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :         [
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :             T=int
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :         ]
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(52): message :  see reference to class template instantiation 'OptimMergeSort<int,InsertionSort<T>>' being compiled
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(52): message :         with
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(52): message :         [
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(52): message :             T=int
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(52): message :         ]
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimQuickSort.h(42,1): warning C4250:  'OptimQuickSort<int,InsertionSort<T>>': inherits 'DivideStrategy<T>::DivideStrategy<T>::sort' via dominance
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimQuickSort.h(42,1): warning C4250:         with
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimQuickSort.h(42,1): warning C4250:         [
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimQuickSort.h(42,1): warning C4250:             T=int
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\OptimQuickSort.h(42,1): warning C4250:         ]
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :  see declaration of 'DivideStrategy<T>::sort'
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :         with
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :         [
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :             T=int
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message :         ]
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(53): message :  see reference to class template instantiation 'OptimQuickSort<int,InsertionSort<T>>' being compiled
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(53): message :         with
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(53): message :         [
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(53): message :             T=int
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(53): message :         ]
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(22,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(21): message :  while compiling class template member function 'QuickSort<int,InsertionSort<T>>::QuickSort(void)'
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(21): message :         with
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(21): message :         [
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(21): message :             T=int
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(21): message :         ]
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :  see reference to function template instantiation 'QuickSort<int,InsertionSort<T>>::QuickSort(void)' being compiled
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         with
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         [
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :             T=int
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         ]
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :  see reference to class template instantiation 'QuickSort<int,InsertionSort<T>>' being compiled
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         with
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         [
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :             T=int
-C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(51): message :         ]
-  L5.vcxproj -> C:\Users\fused\Desktop\university-challenges\ASD\Laborator\L5\L5\Debug\L5.exe
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(22,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\OptimMergeSort.h(17,1): warning C4250: 'OptimMergeSort<int,InsertionSort<T>>': inherits 'DivideStrategy<T>::DivideStrategy<T>::sort' via dominance
+          with
+          [
+              T=int
+          ]
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message : see declaration of 'DivideStrategy<T>::sort'
+          with
+          [
+              T=int
+          ]
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(49): message : see reference to class template instantiation 'OptimMergeSort<int,InsertionSort<T>>' being compiled
+          with
+          [
+              T=int
+          ]
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\OptimQuickSort.h(42,1): warning C4250: 'OptimQuickSort<int,InsertionSort<T>>': inherits 'DivideStrategy<T>::DivideStrategy<T>::sort' via dominance
+          with
+          [
+              T=int
+          ]
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\DivideStrategy.h(8): message : see declaration of 'DivideStrategy<T>::sort'
+          with
+          [
+              T=int
+          ]
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(50): message : see reference to class template instantiation 'OptimQuickSort<int,InsertionSort<T>>' being compiled
+          with
+          [
+              T=int
+          ]
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(22,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\QuickSort.h(21): message : while compiling class template member function 'QuickSort<int,InsertionSort<T>>::QuickSort(void)'
+          with
+          [
+              T=int
+          ]
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(48): message : see reference to function template instantiation 'QuickSort<int,InsertionSort<T>>::QuickSort(void)' being compiled
+          with
+          [
+              T=int
+          ]
+D:\Git\university-challenges\ASD\Laborator\L5\L5\L5\Problems.h(48): message : see reference to class template instantiation 'QuickSort<int,InsertionSort<T>>' being compiled
+          with
+          [
+              T=int
+          ]
+  L5.vcxproj -> D:\Git\university-challenges\ASD\Laborator\L5\L5\Debug\L5.exe

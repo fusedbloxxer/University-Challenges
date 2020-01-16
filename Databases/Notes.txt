@@ -1,0 +1,25 @@
+Prezentare lume reala: de ce am ales tabelul respectiv si ce face tabelul respectiv, ce stochez in el, care e rolul lui.
+
+Sa avem delete cu setNULL si cascade.
+
+Sa fac O vizualizare complexa, normala si sa arat cum imi da eroare in SQLite.
+Sa comentez clar pe trigger pe cheile straine.
+
+Cum se scrie codul ? COURIER NEW + TABELA: CREATE + INSERT
+
+Vizualizare compusa:
+	Vizualizare = cerere stocata
+	
+SELECT C1, C2, C4, C5...
+FROM T1 JOIN.. T2 JOIN.. T3;
+
+Prin vizualizare trebuie sa mentionez toate cheile not null !! ca altfel nu am avea cum sa inseram nu ?
+
+Simpla: doar coloanele
+
+Complexa: care contine campuri modificate: col * 5 SAL_ANUAL => ARE NEVOIE DE NUME !!! nu o putem lasa ca expresie (WITH CHECK OPTION)
+CEA COMPLEXA NU PERMITE LMD(Insert, Update, Delete)
+	DOAR DACA FOLOSIM INSERT EXPLICIT MERGE !!
+	
+
+Compusa: Join intre mai multe tabele, doar in cel cu cheie unica merge sa inserezi

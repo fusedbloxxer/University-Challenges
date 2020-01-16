@@ -43,14 +43,11 @@ void sortingMethods()
 	int elements[] = { 5, 6, 9, 11, 3, 12, -2, -2, 4, 3, 2, -2, 1, 1, 5, 6, 9, 11, 3, 12, -2, -2, 4, 3, 2, -2, 1, 1 };
 	int elements2[] = { 5, 6, 9, 11, 3, 12, -2 };
 
-	// Logger::setMode(0);
-	// Logger::setMode(8);
-	// Logger::setMode(12);
-	Logger::e("HeapSort:\n"); testStrategy(elements2, length2, new HeapSort<int>);
-	Logger::e("MergeSort:\n"); testStrategy(elements2, length2, new MergeSort<int>);
-	Logger::e("QuickSort:\n"); testStrategy(elements2, length2, new QuickSort<int>);
+	Logger::e("HeapSort:\n"); testStrategy(elements, length, new HeapSort<int>);
+	Logger::e("MergeSort:\n"); testStrategy(elements, length, new MergeSort<int>);
+	Logger::e("QuickSort:\n"); testStrategy(elements, length, new QuickSort<int>);
 	Logger::e("OptimMergeSort:\n"); testStrategy(elements, length, new OptimMergeSort<int, InsertionSort<int>>);
-	Logger::e("OptimQuickSort:\n"); testStrategy(elements2, length2, new OptimQuickSort<int>);
+	Logger::e("OptimQuickSort:\n"); testStrategy(elements, length, new OptimQuickSort<int>);
 }
 
 void problemFive()

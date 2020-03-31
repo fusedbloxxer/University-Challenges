@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Andrei Ionescu/Desktop/IONESCU_ANDREI_AN_2_252/main.cpp
+iostream
+-
+cmath
+-
+vector
+-
+numeric
+-
+algorithm
+-
+unordered_map
+-
+
